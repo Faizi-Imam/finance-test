@@ -3,55 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Faidence Finance – Smart Financial Tools & Calculators</title>
-  <meta name="description" content="Faidence Finance offers smart budgeting tools, financial calculators, investment trackers, and AI-powered insights to help you manage money smarter." />
+
+  <!-- ═══ SEO META TAGS ═══ -->
+  <title>Free Financial Calculators – EMI, SIP, FD, GST | Faidence Finance</title>
+  <meta name="description" content="Free online financial calculators for India – EMI calculator, SIP calculator, FD calculator, GST calculator, Compound Interest calculator. Plan your loans, investments and taxes instantly." />
+  <meta name="keywords" content="EMI calculator, SIP calculator, FD calculator, GST calculator, loan calculator, compound interest calculator, home loan EMI, personal loan EMI, mutual fund SIP, fixed deposit calculator India, financial calculator free" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Faidence Finance" />
   <link rel="canonical" href="https://finance.faidence.com/" />
+
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://finance.faidence.com/" />
+  <meta property="og:title" content="Free Financial Calculators – EMI, SIP, FD, GST | Faidence Finance" />
+  <meta property="og:description" content="Free online EMI, SIP, FD and GST calculators for India. Plan smarter – no signup required." />
+  <meta property="og:site_name" content="Faidence Finance" />
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Financial Calculators | Faidence Finance" />
+  <meta name="twitter:description" content="EMI, SIP, FD, GST calculators – free, fast, no login required." />
+
+  <!-- ═══ SCHEMA.ORG STRUCTURED DATA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Faidence Finance",
+    "url": "https://finance.faidence.com",
+    "description": "Free financial calculators for EMI, SIP, FD, GST and more.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://finance.faidence.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- ═══ FONTS ═══ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-    crossorigin="anonymous"></script>
+  <!-- ═══ GOOGLE ADSENSE ═══ -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="navbar">
+  <!-- ════════════════════════════
+       NAVBAR
+  ════════════════════════════ -->
+  <nav class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="/" class="logo">fai<span>dence</span></a>
-      <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#tutoring">Tutoring</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="#contact" class="btn-nav">Get Started</a></li>
+      <a href="/" class="logo" aria-label="Faidence Finance Home">
+        <span class="logo-icon">₹</span> Faidence <span class="logo-fin">Finance</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#calculators">Calculators</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#disclaimer">Disclaimer</a></li>
+        <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener" class="btn-tutor">🎓 Find Tutors</a></li>
       </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-glow"></div>
+  <!-- ════════════════════════════
+       HERO
+  ════════════════════════════ -->
+  <header class="hero" id="home">
+    <div class="hero-bg-grid"></div>
     <div class="hero-content">
-      <span class="badge">🚀 Now Live – finance.faidence.com</span>
-      <h1>Smart Finance Tools,<br /><span class="gradient-text">Simplified.</span></h1>
-      <p class="hero-sub">Faidence Finance gives you powerful budgeting tools, investment trackers, and AI-powered insights — all in one place. Take control of your money today.</p>
-      <div class="hero-cta">
-        <a href="#features" id="cta-explore" class="btn-primary">Explore Features</a>
-        <a href="#tutoring" id="cta-tutoring" class="btn-ghost">Find a Tutor →</a>
+      <div class="hero-badge">🇮🇳 Made for India • 100% Free • No Signup</div>
+      <h1>Smart Financial<br /><span class="gradient-text">Calculators</span></h1>
+      <p class="hero-sub">
+        Instantly calculate EMI, SIP returns, FD maturity, GST & compound interest.<br />
+        All calculations happen in your browser — no data stored, no hidden fees.
+      </p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Calculators</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">Free</span><span class="stat-label">Always</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">Instant</span><span class="stat-label">Results</span></div>
+      </div>
+      <a href="#calculators" class="btn-primary" id="hero-cta">Start Calculating ↓</a>
+    </div>
+    <div class="hero-cards">
+      <div class="floating-card fc1">
+        <div class="fc-label">Home Loan EMI</div>
+        <div class="fc-value">₹32,400<span>/mo</span></div>
+        <div class="fc-sub">₹40L • 8.5% • 20yr</div>
+      </div>
+      <div class="floating-card fc2">
+        <div class="fc-label">SIP Returns</div>
+        <div class="fc-value">₹16.8L</div>
+        <div class="fc-sub">₹5K/mo • 12% • 10yr</div>
+      </div>
+      <div class="floating-card fc3">
+        <div class="fc-label">FD Maturity</div>
+        <div class="fc-value">₹1.64L</div>
+        <div class="fc-sub">₹1L • 7% • 3yr</div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="card-float card-1">📈 Portfolio +24%</div>
-      <div class="card-float card-2">💰 Save ₹5K this month</div>
-      <div class="card-float card-3">💡 AI Insights Ready</div>
-    </div>
-  </section>
+  </header>
 
-  <!-- AD UNIT 1 – Top Banner -->
-  <section class="ad-section">
-    <div class="ad-label">Advertisement</div>
+  <!-- ════════════════════════════
+       AD UNIT 1 – Top
+  ════════════════════════════ -->
+  <div class="ad-wrapper">
+    <span class="ad-label">Advertisement</span>
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
@@ -59,51 +122,366 @@
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </section>
+  </div>
 
-  <!-- FEATURES -->
-  <section class="features" id="features">
+  <!-- ════════════════════════════
+       CALCULATOR TABS
+  ════════════════════════════ -->
+  <section class="calculators" id="calculators">
     <div class="section-header">
-      <h2>Everything You Need</h2>
-      <p>Powerful financial tools to budget, invest, and grow your wealth smarter.</p>
+      <h2>Financial Calculators</h2>
+      <p>Click any tool below — results update instantly as you type.</p>
     </div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <h3>Budget Tracker</h3>
-        <p>Track income, expenses, and savings goals automatically with real-time insights.</p>
+
+    <!-- TAB BUTTONS -->
+    <div class="tab-bar" id="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="emi" role="tab" aria-selected="true" id="tab-emi">🏠 EMI</button>
+      <button class="tab-btn" data-tab="sip" role="tab" aria-selected="false" id="tab-sip">📈 SIP</button>
+      <button class="tab-btn" data-tab="fd" role="tab" aria-selected="false" id="tab-fd">🏦 FD</button>
+      <button class="tab-btn" data-tab="gst" role="tab" aria-selected="false" id="tab-gst">🧾 GST</button>
+      <button class="tab-btn" data-tab="ci" role="tab" aria-selected="false" id="tab-ci">💹 Compound</button>
+    </div>
+
+    <!-- ── EMI CALCULATOR ── -->
+    <div class="calc-panel active" id="calc-emi" role="tabpanel">
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <h3 class="calc-title">EMI Calculator</h3>
+          <p class="calc-desc">Calculate your monthly loan instalment for home, car, personal or education loans.</p>
+
+          <div class="input-group">
+            <label for="emi-principal">Loan Amount (₹)</label>
+            <input type="number" id="emi-principal" value="2000000" min="10000" max="100000000" step="10000" />
+            <input type="range" id="emi-principal-r" min="10000" max="10000000" step="10000" value="2000000" class="slider" />
+            <div class="range-labels"><span>₹10K</span><span>₹1Cr</span></div>
+          </div>
+
+          <div class="input-group">
+            <label for="emi-rate">Annual Interest Rate (%)</label>
+            <input type="number" id="emi-rate" value="8.5" min="1" max="30" step="0.1" />
+            <input type="range" id="emi-rate-r" min="1" max="30" step="0.1" value="8.5" class="slider" />
+            <div class="range-labels"><span>1%</span><span>30%</span></div>
+          </div>
+
+          <div class="input-group">
+            <label for="emi-tenure">Loan Tenure (Years)</label>
+            <input type="number" id="emi-tenure" value="20" min="1" max="30" step="1" />
+            <input type="range" id="emi-tenure-r" min="1" max="30" step="1" value="20" class="slider" />
+            <div class="range-labels"><span>1 yr</span><span>30 yr</span></div>
+          </div>
+        </div>
+
+        <div class="calc-results">
+          <div class="result-card">
+            <div class="result-main">
+              <span class="result-label">Monthly EMI</span>
+              <span class="result-value" id="emi-result">₹0</span>
+            </div>
+            <div class="result-breakdown">
+              <div class="rb-item">
+                <span class="rb-dot dot-principal"></span>
+                <span class="rb-label">Principal Amount</span>
+                <span class="rb-val" id="emi-principal-out">₹0</span>
+              </div>
+              <div class="rb-item">
+                <span class="rb-dot dot-interest"></span>
+                <span class="rb-label">Total Interest</span>
+                <span class="rb-val" id="emi-interest-out">₹0</span>
+              </div>
+              <div class="rb-item total-row">
+                <span class="rb-dot dot-total"></span>
+                <span class="rb-label">Total Payment</span>
+                <span class="rb-val" id="emi-total-out">₹0</span>
+              </div>
+            </div>
+            <div class="donut-wrap">
+              <canvas id="emi-chart" width="180" height="180"></canvas>
+              <div class="donut-legend">
+                <span class="leg-item"><span class="leg-dot dot-principal"></span>Principal</span>
+                <span class="leg-item"><span class="leg-dot dot-interest"></span>Interest</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🤖</div>
-        <h3>AI Finance Advisor</h3>
-        <p>Get personalized financial advice powered by AI tailored to your spending habits.</p>
+    </div>
+
+    <!-- ── SIP CALCULATOR ── -->
+    <div class="calc-panel" id="calc-sip" role="tabpanel">
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <h3 class="calc-title">SIP Calculator</h3>
+          <p class="calc-desc">Estimate your Systematic Investment Plan (SIP) returns for mutual funds.</p>
+
+          <div class="input-group">
+            <label for="sip-amount">Monthly Investment (₹)</label>
+            <input type="number" id="sip-amount" value="5000" min="500" max="1000000" step="500" />
+            <input type="range" id="sip-amount-r" min="500" max="100000" step="500" value="5000" class="slider" />
+            <div class="range-labels"><span>₹500</span><span>₹1L</span></div>
+          </div>
+
+          <div class="input-group">
+            <label for="sip-rate">Expected Annual Return (%)</label>
+            <input type="number" id="sip-rate" value="12" min="1" max="30" step="0.5" />
+            <input type="range" id="sip-rate-r" min="1" max="30" step="0.5" value="12" class="slider" />
+            <div class="range-labels"><span>1%</span><span>30%</span></div>
+          </div>
+
+          <div class="input-group">
+            <label for="sip-tenure">Investment Period (Years)</label>
+            <input type="number" id="sip-tenure" value="10" min="1" max="40" step="1" />
+            <input type="range" id="sip-tenure-r" min="1" max="40" step="1" value="10" class="slider" />
+            <div class="range-labels"><span>1 yr</span><span>40 yr</span></div>
+          </div>
+        </div>
+
+        <div class="calc-results">
+          <div class="result-card">
+            <div class="result-main">
+              <span class="result-label">Estimated Returns</span>
+              <span class="result-value" id="sip-result">₹0</span>
+            </div>
+            <div class="result-breakdown">
+              <div class="rb-item">
+                <span class="rb-dot dot-principal"></span>
+                <span class="rb-label">Amount Invested</span>
+                <span class="rb-val" id="sip-invested">₹0</span>
+              </div>
+              <div class="rb-item">
+                <span class="rb-dot dot-interest"></span>
+                <span class="rb-label">Wealth Gained</span>
+                <span class="rb-val" id="sip-gain">₹0</span>
+              </div>
+              <div class="rb-item total-row">
+                <span class="rb-dot dot-total"></span>
+                <span class="rb-label">Total Value</span>
+                <span class="rb-val" id="sip-total">₹0</span>
+              </div>
+            </div>
+            <div class="donut-wrap">
+              <canvas id="sip-chart" width="180" height="180"></canvas>
+              <div class="donut-legend">
+                <span class="leg-item"><span class="leg-dot dot-principal"></span>Invested</span>
+                <span class="leg-item"><span class="leg-dot dot-interest"></span>Returns</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">📉</div>
-        <h3>Expense Analytics</h3>
-        <p>Visualise where every rupee goes with smart charts and weekly spending reports.</p>
+    </div>
+
+    <!-- ── FD CALCULATOR ── -->
+    <div class="calc-panel" id="calc-fd" role="tabpanel">
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <h3 class="calc-title">Fixed Deposit (FD) Calculator</h3>
+          <p class="calc-desc">Calculate the maturity amount and interest earned on your fixed deposit.</p>
+
+          <div class="input-group">
+            <label for="fd-principal">Deposit Amount (₹)</label>
+            <input type="number" id="fd-principal" value="100000" min="1000" max="10000000" step="1000" />
+            <input type="range" id="fd-principal-r" min="1000" max="5000000" step="1000" value="100000" class="slider" />
+            <div class="range-labels"><span>₹1K</span><span>₹50L</span></div>
+          </div>
+
+          <div class="input-group">
+            <label for="fd-rate">Annual Interest Rate (%)</label>
+            <input type="number" id="fd-rate" value="7" min="1" max="15" step="0.25" />
+            <input type="range" id="fd-rate-r" min="1" max="15" step="0.25" value="7" class="slider" />
+            <div class="range-labels"><span>1%</span><span>15%</span></div>
+          </div>
+
+          <div class="input-group">
+            <label for="fd-tenure">Tenure (Years)</label>
+            <input type="number" id="fd-tenure" value="3" min="1" max="10" step="1" />
+            <input type="range" id="fd-tenure-r" min="1" max="10" step="1" value="3" class="slider" />
+            <div class="range-labels"><span>1 yr</span><span>10 yr</span></div>
+          </div>
+
+          <div class="input-group">
+            <label for="fd-freq">Compounding Frequency</label>
+            <select id="fd-freq" class="select-input">
+              <option value="4">Quarterly (Default)</option>
+              <option value="12">Monthly</option>
+              <option value="2">Half-Yearly</option>
+              <option value="1">Yearly</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="calc-results">
+          <div class="result-card">
+            <div class="result-main">
+              <span class="result-label">Maturity Amount</span>
+              <span class="result-value" id="fd-result">₹0</span>
+            </div>
+            <div class="result-breakdown">
+              <div class="rb-item">
+                <span class="rb-dot dot-principal"></span>
+                <span class="rb-label">Principal</span>
+                <span class="rb-val" id="fd-principal-out">₹0</span>
+              </div>
+              <div class="rb-item">
+                <span class="rb-dot dot-interest"></span>
+                <span class="rb-label">Interest Earned</span>
+                <span class="rb-val" id="fd-interest-out">₹0</span>
+              </div>
+              <div class="rb-item total-row">
+                <span class="rb-dot dot-total"></span>
+                <span class="rb-label">Total Value</span>
+                <span class="rb-val" id="fd-total-out">₹0</span>
+              </div>
+            </div>
+            <div class="donut-wrap">
+              <canvas id="fd-chart" width="180" height="180"></canvas>
+              <div class="donut-legend">
+                <span class="leg-item"><span class="leg-dot dot-principal"></span>Principal</span>
+                <span class="leg-item"><span class="leg-dot dot-interest"></span>Interest</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔒</div>
-        <h3>Bank-Grade Security</h3>
-        <p>Your data is encrypted end-to-end with Supabase-powered authentication.</p>
+    </div>
+
+    <!-- ── GST CALCULATOR ── -->
+    <div class="calc-panel" id="calc-gst" role="tabpanel">
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <h3 class="calc-title">GST Calculator</h3>
+          <p class="calc-desc">Calculate GST inclusive or exclusive price for any goods or services in India.</p>
+
+          <div class="input-group">
+            <label for="gst-amount">Enter Amount (₹)</label>
+            <input type="number" id="gst-amount" value="10000" min="1" step="1" />
+          </div>
+
+          <div class="input-group">
+            <label for="gst-rate">GST Rate (%)</label>
+            <select id="gst-rate" class="select-input">
+              <option value="5">5% – Essential goods</option>
+              <option value="12">12% – Standard goods</option>
+              <option value="18" selected>18% – Most services</option>
+              <option value="28">28% – Luxury goods</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Calculation Type</label>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="gst-type" value="exclusive" checked id="gst-excl" /> Add GST (Exclusive)</label>
+              <label class="radio-label"><input type="radio" name="gst-type" value="inclusive" id="gst-incl" /> Remove GST (Inclusive)</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-results">
+          <div class="result-card gst-result-card">
+            <div class="gst-row">
+              <span>Original Amount</span>
+              <span id="gst-original">₹0</span>
+            </div>
+            <div class="gst-row accent-row">
+              <span id="gst-type-label">GST Amount (18%)</span>
+              <span id="gst-amount-out">₹0</span>
+            </div>
+            <div class="gst-row">
+              <span>CGST (9%)</span>
+              <span id="gst-cgst">₹0</span>
+            </div>
+            <div class="gst-row">
+              <span>SGST (9%)</span>
+              <span id="gst-sgst">₹0</span>
+            </div>
+            <div class="gst-row total-gst-row">
+              <span id="gst-total-label">Total Amount (with GST)</span>
+              <span id="gst-total">₹0</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">📱</div>
-        <h3>Mobile Friendly</h3>
-        <p>Fully responsive experience on any device – phone, tablet, or desktop.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <h3>Instant Insights</h3>
-        <p>Get live reports on your spending, savings, and investment returns in real time.</p>
+    </div>
+
+    <!-- ── COMPOUND INTEREST CALCULATOR ── -->
+    <div class="calc-panel" id="calc-ci" role="tabpanel">
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <h3 class="calc-title">Compound Interest Calculator</h3>
+          <p class="calc-desc">See the power of compounding on your investments or savings over time.</p>
+
+          <div class="input-group">
+            <label for="ci-principal">Principal Amount (₹)</label>
+            <input type="number" id="ci-principal" value="100000" min="1000" step="1000" />
+            <input type="range" id="ci-principal-r" min="1000" max="5000000" step="1000" value="100000" class="slider" />
+            <div class="range-labels"><span>₹1K</span><span>₹50L</span></div>
+          </div>
+
+          <div class="input-group">
+            <label for="ci-rate">Annual Interest Rate (%)</label>
+            <input type="number" id="ci-rate" value="10" min="1" max="30" step="0.5" />
+            <input type="range" id="ci-rate-r" min="1" max="30" step="0.5" value="10" class="slider" />
+            <div class="range-labels"><span>1%</span><span>30%</span></div>
+          </div>
+
+          <div class="input-group">
+            <label for="ci-tenure">Time Period (Years)</label>
+            <input type="number" id="ci-tenure" value="5" min="1" max="40" step="1" />
+            <input type="range" id="ci-tenure-r" min="1" max="40" step="1" value="5" class="slider" />
+            <div class="range-labels"><span>1 yr</span><span>40 yr</span></div>
+          </div>
+
+          <div class="input-group">
+            <label for="ci-freq">Compounding Frequency</label>
+            <select id="ci-freq" class="select-input">
+              <option value="12">Monthly</option>
+              <option value="4" selected>Quarterly</option>
+              <option value="2">Half-Yearly</option>
+              <option value="1">Annually</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="calc-results">
+          <div class="result-card">
+            <div class="result-main">
+              <span class="result-label">Total Amount</span>
+              <span class="result-value" id="ci-result">₹0</span>
+            </div>
+            <div class="result-breakdown">
+              <div class="rb-item">
+                <span class="rb-dot dot-principal"></span>
+                <span class="rb-label">Principal</span>
+                <span class="rb-val" id="ci-principal-out">₹0</span>
+              </div>
+              <div class="rb-item">
+                <span class="rb-dot dot-interest"></span>
+                <span class="rb-label">Compound Interest</span>
+                <span class="rb-val" id="ci-interest-out">₹0</span>
+              </div>
+              <div class="rb-item total-row">
+                <span class="rb-dot dot-total"></span>
+                <span class="rb-label">Total Value</span>
+                <span class="rb-val" id="ci-total-out">₹0</span>
+              </div>
+            </div>
+            <div class="donut-wrap">
+              <canvas id="ci-chart" width="180" height="180"></canvas>
+              <div class="donut-legend">
+                <span class="leg-item"><span class="leg-dot dot-principal"></span>Principal</span>
+                <span class="leg-item"><span class="leg-dot dot-interest"></span>Interest</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- AD UNIT 2 – Mid-page In-Article -->
-  <section class="ad-section">
-    <div class="ad-label">Advertisement</div>
+  <!-- ════════════════════════════
+       AD UNIT 2 – Mid
+  ════════════════════════════ -->
+  <div class="ad-wrapper">
+    <span class="ad-label">Advertisement</span>
     <ins class="adsbygoogle"
          style="display:block; text-align:center;"
          data-ad-layout="in-article"
@@ -111,42 +489,53 @@
          data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
          data-ad-slot="XXXXXXXXXX"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </section>
+  </div>
 
-  <!-- TUTORING -->
-  <section class="tutoring" id="tutoring">
+  <!-- ════════════════════════════
+       HOW IT WORKS
+  ════════════════════════════ -->
+  <section class="how-it-works" id="how-it-works">
     <div class="section-header">
-      <h2>Online Tutoring</h2>
-      <p>Learn from the best. Any subject. Any time. Any device.</p>
+      <h2>How It Works</h2>
+      <p>Simple, transparent, and always free.</p>
     </div>
-    <div class="tutor-grid">
-      <div class="tutor-card">
-        <div class="tutor-avatar">👩‍🏫</div>
-        <h4>Maths & Science</h4>
-        <p>From GCSE to A-Level, our tutors help students achieve top grades.</p>
-        <span class="tutor-tag">500+ Tutors</span>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3>Choose a Calculator</h3>
+        <p>Pick from EMI, SIP, FD, GST or Compound Interest calculators above.</p>
       </div>
-      <div class="tutor-card">
-        <div class="tutor-avatar">🌍</div>
-        <h4>Languages</h4>
-        <p>English, Hindi, French, Spanish – native speaker tutors available.</p>
-        <span class="tutor-tag">200+ Tutors</span>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3>Enter Your Values</h3>
+        <p>Type in your amount, rate, and tenure. Use sliders for quick adjustments.</p>
       </div>
-      <div class="tutor-card">
-        <div class="tutor-avatar">💻</div>
-        <h4>Coding & Tech</h4>
-        <p>Python, Web Dev, Data Science – learn industry-ready skills fast.</p>
-        <span class="tutor-tag">300+ Tutors</span>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3>Get Instant Results</h3>
+        <p>Results update in real time with a visual breakdown. No submit button needed.</p>
       </div>
-    </div>
-    <div style="text-align:center; margin-top: 2.5rem;">
-      <a href="#contact" id="cta-find-tutor" class="btn-primary">Find Your Tutor</a>
     </div>
   </section>
 
-  <!-- AD UNIT 3 – Bottom Banner -->
-  <section class="ad-section">
-    <div class="ad-label">Advertisement</div>
+  <!-- ════════════════════════════
+       TUTOR CTA BANNER
+  ════════════════════════════ -->
+  <section class="tutor-banner">
+    <div class="tutor-banner-inner">
+      <div class="tutor-banner-text">
+        <h2>🎓 Need Help with Finance, Maths or Accounting?</h2>
+        <p>Connect with expert online tutors on <strong>Faidence Tutoring</strong> and learn at your own pace.</p>
+      </div>
+      <a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener" id="tutor-cta" class="btn-primary">Find a Tutor →</a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════
+       AD UNIT 3 – Bottom
+  ════════════════════════════ -->
+  <div class="ad-wrapper">
+    <span class="ad-label">Advertisement</span>
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
@@ -154,28 +543,61 @@
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </section>
+  </div>
 
-  <!-- CONTACT / CTA -->
-  <section class="contact-cta" id="contact">
-    <div class="cta-box">
-      <h2>Ready to get started?</h2>
-      <p>Join thousands already using Faidence Finance to budget smarter, invest better, and build wealth faster.</p>
-      <a href="mailto:hello@faidence.com" id="cta-email" class="btn-primary">Contact Us</a>
+  <!-- ════════════════════════════
+       DISCLAIMER
+  ════════════════════════════ -->
+  <section class="disclaimer" id="disclaimer">
+    <div class="disclaimer-inner">
+      <div class="disclaimer-icon">⚠️</div>
+      <div class="disclaimer-text">
+        <h3>Important Disclaimer</h3>
+        <p>
+          The calculators on <strong>finance.faidence.com</strong> are provided for <strong>educational and informational purposes only</strong>.
+          Results are estimates based on the values you enter and do <strong>not constitute financial, investment, tax, or legal advice</strong>.
+          Actual loan EMIs, investment returns, or tax obligations may vary based on bank policies, market conditions, RBI regulations, and individual circumstances.
+          <strong>Always consult a qualified financial advisor</strong> before making any financial decisions.
+          Faidence Finance is not a SEBI-registered investment advisor or a financial institution.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ════════════════════════════
+       FOOTER
+  ════════════════════════════ -->
   <footer class="footer">
     <div class="footer-inner">
-      <a href="/" class="logo">fai<span>dence</span></a>
-      <p>© 2026 Faidence Finance. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="mailto:hello@faidence.com">Contact</a>
+      <div class="footer-brand">
+        <a href="/" class="logo"><span class="logo-icon">₹</span> Faidence <span class="logo-fin">Finance</span></a>
+        <p>Free financial calculators for India.<br />No signup. No data stored. Always free.</p>
       </div>
+      <div class="footer-links-group">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="#calculators" onclick="switchTab('emi')">EMI Calculator</a></li>
+          <li><a href="#calculators" onclick="switchTab('sip')">SIP Calculator</a></li>
+          <li><a href="#calculators" onclick="switchTab('fd')">FD Calculator</a></li>
+          <li><a href="#calculators" onclick="switchTab('gst')">GST Calculator</a></li>
+          <li><a href="#calculators" onclick="switchTab('ci')">Compound Interest</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Faidence</h4>
+        <ul>
+          <li><a href="https://faidence.com" target="_blank" rel="noopener">Main Site</a></li>
+          <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener">Online Tutoring</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="#disclaimer">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Faidence Finance. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | Not financial advice.</p>
     </div>
   </footer>
 
+  <script src="app.js"></script>
 </body>
 </html>

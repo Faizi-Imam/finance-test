@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ═══ PRIMARY SEO ═══ -->
-  <title>Free Financial Calculators India – EMI, SIP, FD, PPF, Income Tax | Faidence Finance</title>
-  <meta name="description" content="Free online financial calculators for India – EMI calculator, SIP calculator, FD calculator, PPF calculator, Income Tax calculator (Old vs New Regime), GST calculator, Currency converter. Updated for FY 2025-26. No signup required." />
+  <title>Free Financial Calculators India – EMI, SIP, FD, PPF, Tax | Faidence Finance</title>
+  <meta name="description" content="Free online financial calculators for India – EMI, SIP, Fixed Deposit, PPF, GST, Income Tax slabs comparison (Old vs New Regime), and Currency Converter. Updated for FY 2025-26." />
   <meta name="keywords" content="EMI calculator, SIP calculator, FD calculator, PPF calculator, income tax calculator India, GST calculator, compound interest calculator, home loan EMI, personal loan EMI, mutual fund SIP calculator, fixed deposit calculator, currency converter INR, free financial calculators India, FY 2025-26" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <meta name="author" content="Faidence Finance" />
@@ -85,10 +85,10 @@
     <div class="nav-inner">
       <a href="/" class="logo" aria-label="Home"><span class="logo-icon">₹</span>Faidence <span class="logo-fin">Finance</span></a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="/#tools">Tools</a></li>
+        <li><a href="/#faq">FAQ</a></li>
         <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="#disclaimer">Disclaimer</a></li>
+        <li><a href="/#disclaimer">Disclaimer</a></li>
         <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener" class="nav-tutor-link">🎓 Tutoring</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
@@ -143,428 +143,73 @@
   <section class="tool-nav" id="tools">
     <div class="section-header">
       <h2>Choose a Calculator</h2>
-      <p>Click any tool to start — results update instantly as you type.</p>
+      <p>Select any tool below to open its dedicated interactive calculator page.</p>
     </div>
     <div class="tool-grid">
-      <button class="tool-card active" data-calc="emi" id="tc-emi">
+      <a href="emi-calculator.html" class="tool-card" id="tc-emi">
         <div class="tool-icon">🏠</div>
         <div class="tool-name">EMI Calculator</div>
         <div class="tool-desc">Home, Car &amp; Personal Loans</div>
-      </button>
-      <button class="tool-card" data-calc="sip" id="tc-sip">
+      </a>
+      <a href="sip-calculator.html" class="tool-card" id="tc-sip">
         <div class="tool-icon">📈</div>
         <div class="tool-name">SIP Calculator</div>
         <div class="tool-desc">Mutual Fund Returns</div>
-      </button>
-      <button class="tool-card" data-calc="fd" id="tc-fd">
+      </a>
+      <a href="fd-calculator.html" class="tool-card" id="tc-fd">
         <div class="tool-icon">🏦</div>
         <div class="tool-name">FD Calculator</div>
         <div class="tool-desc">Fixed Deposit Maturity</div>
-      </button>
-      <button class="tool-card" data-calc="ppf" id="tc-ppf">
+      </a>
+      <a href="ppf-calculator.html" class="tool-card" id="tc-ppf">
         <div class="tool-icon">🇮🇳</div>
         <div class="tool-name">PPF Calculator</div>
         <div class="tool-desc">Public Provident Fund</div>
-      </button>
-      <button class="tool-card" data-calc="ci" id="tc-ci">
+      </a>
+      <a href="compound-interest-calculator.html" class="tool-card" id="tc-ci">
         <div class="tool-icon">💹</div>
         <div class="tool-name">Compound Interest</div>
         <div class="tool-desc">Power of Compounding</div>
-      </button>
-      <button class="tool-card" data-calc="gst" id="tc-gst">
+      </a>
+      <a href="gst-calculator.html" class="tool-card" id="tc-gst">
         <div class="tool-icon">🧾</div>
         <div class="tool-name">GST Calculator</div>
         <div class="tool-desc">Inclusive &amp; Exclusive</div>
-      </button>
-      <button class="tool-card" data-calc="tax" id="tc-tax">
+      </a>
+      <a href="income-tax-calculator.html" class="tool-card" id="tc-tax">
         <div class="tool-icon">📋</div>
         <div class="tool-name">Income Tax</div>
         <div class="tool-desc">Old vs New Regime FY 25-26</div>
-      </button>
-      <button class="tool-card" data-calc="forex" id="tc-forex">
+      </a>
+      <a href="currency-converter.html" class="tool-card" id="tc-forex">
         <div class="tool-icon">💱</div>
         <div class="tool-name">Currency Converter</div>
         <div class="tool-desc">Live Indicative Rates</div>
-      </button>
+      </a>
     </div>
   </section>
 
-  <!-- ════════════ CALCULATORS SECTION ════════════ -->
-  <section class="calculators-section" id="calculators-section">
-
-    <!-- ── 1. EMI CALCULATOR ── -->
-    <div class="calc-panel active" id="calc-emi">
-      <div class="calc-grid">
-        <div class="calc-inputs">
-          <h3 class="calc-title">EMI Calculator</h3>
-          <p class="calc-desc">Calculate your monthly loan instalment for Home Loan, Car Loan, Personal Loan or Education Loan. Adjust the sliders or type values directly.</p>
-          <div class="input-group">
-            <label for="emi-principal">Loan Amount (₹)</label>
-            <input type="number" id="emi-principal" value="2000000" min="10000" max="100000000" step="10000" />
-            <input type="range" id="emi-principal-r" min="10000" max="10000000" step="10000" value="2000000" class="slider" />
-            <div class="range-labels"><span>₹10K</span><span>₹1Cr</span></div>
-          </div>
-          <div class="input-group">
-            <label for="emi-rate">Annual Interest Rate (%)</label>
-            <input type="number" id="emi-rate" value="8.5" min="1" max="30" step="0.1" />
-            <input type="range" id="emi-rate-r" min="1" max="30" step="0.1" value="8.5" class="slider" />
-            <div class="range-labels"><span>1%</span><span>30%</span></div>
-          </div>
-          <div class="input-group">
-            <label for="emi-tenure">Loan Tenure (Years)</label>
-            <input type="number" id="emi-tenure" value="20" min="1" max="30" step="1" />
-            <input type="range" id="emi-tenure-r" min="1" max="30" step="1" value="20" class="slider" />
-            <div class="range-labels"><span>1 yr</span><span>30 yr</span></div>
-          </div>
+  <!-- ════════════ HOME CONTENT ARTICLE ════════════ -->
+  <section class="faq-section" style="padding-top: 0;">
+    <div style="background: #0d1220; border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 14px; padding: 40px; margin-bottom: 40px;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: #f1f5f9; margin-bottom: 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.07); padding-bottom: 16px;">Smart Financial Planning Made Simple</h2>
+      <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.75; margin-bottom: 16px;">Navigating personal finance in India requires a careful balance of debt management, smart equity exposure, safe savings allocations, and tax optimization. Our suite of free calculators is designed to help you make informed decisions in each of these areas:</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 24px;">
+        <div>
+          <h3 style="color: #3b82f6; font-size: 1.1rem; font-weight: 700; margin-bottom: 8px;">1. Investment &amp; Compounding</h3>
+          <p style="color: #64748b; font-size: 0.85rem; line-height: 1.6;">Wealth creation relies on starting early. Use the <strong>SIP Calculator</strong> to project how systematic mutual fund investments compound over 10, 20, or 30 years. Pair it with the <strong>Compound Interest Calculator</strong> to compare compounding intervals and Rule of 72 estimates.</p>
         </div>
-        <div class="calc-results">
-          <div class="result-card">
-            <div class="result-main"><span class="result-label">Monthly EMI</span><span class="result-value" id="emi-result">₹0</span></div>
-            <div class="result-breakdown">
-              <div class="rb-item"><span class="rb-dot dot-principal"></span><span class="rb-label">Principal Amount</span><span class="rb-val" id="emi-principal-out">₹0</span></div>
-              <div class="rb-item"><span class="rb-dot dot-interest"></span><span class="rb-label">Total Interest</span><span class="rb-val" id="emi-interest-out">₹0</span></div>
-              <div class="rb-item total-row"><span class="rb-dot dot-total"></span><span class="rb-label">Total Payment</span><span class="rb-val" id="emi-total-out">₹0</span></div>
-            </div>
-            <div class="donut-wrap"><canvas id="emi-chart" width="180" height="180"></canvas>
-              <div class="donut-legend"><span class="leg-item"><span class="leg-dot dot-principal"></span>Principal</span><span class="leg-item"><span class="leg-dot dot-interest"></span>Interest</span></div>
-            </div>
-          </div>
+        <div>
+          <h3 style="color: #3b82f6; font-size: 1.1rem; font-weight: 700; margin-bottom: 8px;">2. Debt &amp; Liability Management</h3>
+          <p style="color: #64748b; font-size: 0.85rem; line-height: 1.6;">Loans are powerful tools, but interest costs accumulate quickly. Use the <strong>EMI Calculator</strong> to map out monthly home loan or personal loan payouts. Check how adjustments in interest rates or shorter loan tenures save you lakhs of rupees in interest payouts.</p>
+        </div>
+        <div>
+          <h3 style="color: #3b82f6; font-size: 1.1rem; font-weight: 700; margin-bottom: 8px;">3. Safe Savings &amp; Tax Shelters</h3>
+          <p style="color: #64748b; font-size: 0.85rem; line-height: 1.6;">Every balanced portfolio needs debt exposure. Our <strong>FD Calculator</strong> calculates secure fixed deposit payouts compounded quarterly. For tax-free retirement corpus building, the <strong>PPF Calculator</strong> projects government-backed returns under EEE tax status.</p>
         </div>
       </div>
     </div>
-
-    <!-- ── 2. SIP CALCULATOR ── -->
-    <div class="calc-panel" id="calc-sip">
-      <div class="calc-grid">
-        <div class="calc-inputs">
-          <h3 class="calc-title">SIP Calculator</h3>
-          <p class="calc-desc">Estimate your Systematic Investment Plan (SIP) returns for mutual funds. See how small monthly investments grow into wealth over time.</p>
-          <div class="input-group">
-            <label for="sip-amount">Monthly Investment (₹)</label>
-            <input type="number" id="sip-amount" value="5000" min="500" max="1000000" step="500" />
-            <input type="range" id="sip-amount-r" min="500" max="100000" step="500" value="5000" class="slider" />
-            <div class="range-labels"><span>₹500</span><span>₹1L</span></div>
-          </div>
-          <div class="input-group">
-            <label for="sip-rate">Expected Annual Return (%)</label>
-            <input type="number" id="sip-rate" value="12" min="1" max="30" step="0.5" />
-            <input type="range" id="sip-rate-r" min="1" max="30" step="0.5" value="12" class="slider" />
-            <div class="range-labels"><span>1%</span><span>30%</span></div>
-          </div>
-          <div class="input-group">
-            <label for="sip-tenure">Investment Period (Years)</label>
-            <input type="number" id="sip-tenure" value="10" min="1" max="40" step="1" />
-            <input type="range" id="sip-tenure-r" min="1" max="40" step="1" value="10" class="slider" />
-            <div class="range-labels"><span>1 yr</span><span>40 yr</span></div>
-          </div>
-        </div>
-        <div class="calc-results">
-          <div class="result-card">
-            <div class="result-main"><span class="result-label">Estimated Returns</span><span class="result-value" id="sip-result">₹0</span></div>
-            <div class="result-breakdown">
-              <div class="rb-item"><span class="rb-dot dot-principal"></span><span class="rb-label">Amount Invested</span><span class="rb-val" id="sip-invested">₹0</span></div>
-              <div class="rb-item"><span class="rb-dot dot-interest"></span><span class="rb-label">Wealth Gained</span><span class="rb-val" id="sip-gain">₹0</span></div>
-              <div class="rb-item total-row"><span class="rb-dot dot-total"></span><span class="rb-label">Total Value</span><span class="rb-val" id="sip-total">₹0</span></div>
-            </div>
-            <div class="donut-wrap"><canvas id="sip-chart" width="180" height="180"></canvas>
-              <div class="donut-legend"><span class="leg-item"><span class="leg-dot dot-principal"></span>Invested</span><span class="leg-item"><span class="leg-dot dot-interest"></span>Returns</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── 3. FD CALCULATOR ── -->
-    <div class="calc-panel" id="calc-fd">
-      <div class="calc-grid">
-        <div class="calc-inputs">
-          <h3 class="calc-title">Fixed Deposit (FD) Calculator</h3>
-          <p class="calc-desc">Calculate the maturity amount and interest earned on your fixed deposit. Compare different tenures and compounding frequencies.</p>
-          <div class="input-group">
-            <label for="fd-principal">Deposit Amount (₹)</label>
-            <input type="number" id="fd-principal" value="100000" min="1000" max="10000000" step="1000" />
-            <input type="range" id="fd-principal-r" min="1000" max="5000000" step="1000" value="100000" class="slider" />
-            <div class="range-labels"><span>₹1K</span><span>₹50L</span></div>
-          </div>
-          <div class="input-group">
-            <label for="fd-rate">Annual Interest Rate (%)</label>
-            <input type="number" id="fd-rate" value="7" min="1" max="15" step="0.25" />
-            <input type="range" id="fd-rate-r" min="1" max="15" step="0.25" value="7" class="slider" />
-            <div class="range-labels"><span>1%</span><span>15%</span></div>
-          </div>
-          <div class="input-group">
-            <label for="fd-tenure">Tenure (Years)</label>
-            <input type="number" id="fd-tenure" value="3" min="1" max="10" step="1" />
-            <input type="range" id="fd-tenure-r" min="1" max="10" step="1" value="3" class="slider" />
-            <div class="range-labels"><span>1 yr</span><span>10 yr</span></div>
-          </div>
-          <div class="input-group">
-            <label for="fd-freq">Compounding Frequency</label>
-            <select id="fd-freq" class="select-input">
-              <option value="4" selected>Quarterly (Default)</option>
-              <option value="12">Monthly</option>
-              <option value="2">Half-Yearly</option>
-              <option value="1">Yearly</option>
-            </select>
-          </div>
-        </div>
-        <div class="calc-results">
-          <div class="result-card">
-            <div class="result-main"><span class="result-label">Maturity Amount</span><span class="result-value" id="fd-result">₹0</span></div>
-            <div class="result-breakdown">
-              <div class="rb-item"><span class="rb-dot dot-principal"></span><span class="rb-label">Principal</span><span class="rb-val" id="fd-principal-out">₹0</span></div>
-              <div class="rb-item"><span class="rb-dot dot-interest"></span><span class="rb-label">Interest Earned</span><span class="rb-val" id="fd-interest-out">₹0</span></div>
-              <div class="rb-item total-row"><span class="rb-dot dot-total"></span><span class="rb-label">Total Value</span><span class="rb-val" id="fd-total-out">₹0</span></div>
-            </div>
-            <div class="donut-wrap"><canvas id="fd-chart" width="180" height="180"></canvas>
-              <div class="donut-legend"><span class="leg-item"><span class="leg-dot dot-principal"></span>Principal</span><span class="leg-item"><span class="leg-dot dot-interest"></span>Interest</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── 4. PPF CALCULATOR ── -->
-    <div class="calc-panel" id="calc-ppf">
-      <div class="calc-grid">
-        <div class="calc-inputs">
-          <h3 class="calc-title">PPF Calculator</h3>
-          <p class="calc-desc">Calculate Public Provident Fund maturity amount. PPF offers tax-free returns (EEE status) at 7.1% p.a. with a 15-year lock-in, extendable in blocks of 5 years.</p>
-          <div class="input-group">
-            <label for="ppf-annual">Yearly Investment (₹)</label>
-            <input type="number" id="ppf-annual" value="150000" min="500" max="150000" step="500" />
-            <input type="range" id="ppf-annual-r" min="500" max="150000" step="500" value="150000" class="slider" />
-            <div class="range-labels"><span>₹500</span><span>₹1.5L (max)</span></div>
-          </div>
-          <div class="input-group">
-            <label for="ppf-tenure">Tenure (Years)</label>
-            <input type="number" id="ppf-tenure" value="15" min="15" max="50" step="5" />
-            <input type="range" id="ppf-tenure-r" min="15" max="50" step="5" value="15" class="slider" />
-            <div class="range-labels"><span>15 yr</span><span>50 yr</span></div>
-          </div>
-          <div class="input-group">
-            <label>Interest Rate</label>
-            <div class="ppf-rate-display">7.1% p.a. (Government set, reviewed quarterly)</div>
-          </div>
-        </div>
-        <div class="calc-results">
-          <div class="result-card">
-            <div class="result-main"><span class="result-label">Maturity Amount</span><span class="result-value" id="ppf-result">₹0</span></div>
-            <div class="result-breakdown">
-              <div class="rb-item"><span class="rb-dot dot-principal"></span><span class="rb-label">Total Invested</span><span class="rb-val" id="ppf-invested-out">₹0</span></div>
-              <div class="rb-item"><span class="rb-dot dot-interest"></span><span class="rb-label">Interest Earned</span><span class="rb-val" id="ppf-interest-out">₹0</span></div>
-              <div class="rb-item total-row"><span class="rb-dot dot-total"></span><span class="rb-label">Total Value</span><span class="rb-val" id="ppf-total-out">₹0</span></div>
-            </div>
-            <div class="donut-wrap"><canvas id="ppf-chart" width="180" height="180"></canvas>
-              <div class="donut-legend"><span class="leg-item"><span class="leg-dot dot-principal"></span>Invested</span><span class="leg-item"><span class="leg-dot dot-interest"></span>Interest</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── 5. COMPOUND INTEREST ── -->
-    <div class="calc-panel" id="calc-ci">
-      <div class="calc-grid">
-        <div class="calc-inputs">
-          <h3 class="calc-title">Compound Interest Calculator</h3>
-          <p class="calc-desc">See the power of compounding on your investments or savings. Compare different compounding frequencies to find the best returns.</p>
-          <div class="input-group">
-            <label for="ci-principal">Principal Amount (₹)</label>
-            <input type="number" id="ci-principal" value="100000" min="1000" max="10000000" step="1000" />
-            <input type="range" id="ci-principal-r" min="1000" max="5000000" step="1000" value="100000" class="slider" />
-            <div class="range-labels"><span>₹1K</span><span>₹50L</span></div>
-          </div>
-          <div class="input-group">
-            <label for="ci-rate">Annual Interest Rate (%)</label>
-            <input type="number" id="ci-rate" value="10" min="1" max="30" step="0.5" />
-            <input type="range" id="ci-rate-r" min="1" max="30" step="0.5" value="10" class="slider" />
-            <div class="range-labels"><span>1%</span><span>30%</span></div>
-          </div>
-          <div class="input-group">
-            <label for="ci-tenure">Time Period (Years)</label>
-            <input type="number" id="ci-tenure" value="5" min="1" max="40" step="1" />
-            <input type="range" id="ci-tenure-r" min="1" max="40" step="1" value="5" class="slider" />
-            <div class="range-labels"><span>1 yr</span><span>40 yr</span></div>
-          </div>
-          <div class="input-group">
-            <label for="ci-freq">Compounding Frequency</label>
-            <select id="ci-freq" class="select-input">
-              <option value="1">Annually</option>
-              <option value="2">Half-Yearly</option>
-              <option value="4" selected>Quarterly</option>
-              <option value="12">Monthly</option>
-            </select>
-          </div>
-        </div>
-        <div class="calc-results">
-          <div class="result-card">
-            <div class="result-main"><span class="result-label">Total Amount</span><span class="result-value" id="ci-result">₹0</span></div>
-            <div class="result-breakdown">
-              <div class="rb-item"><span class="rb-dot dot-principal"></span><span class="rb-label">Principal</span><span class="rb-val" id="ci-principal-out">₹0</span></div>
-              <div class="rb-item"><span class="rb-dot dot-interest"></span><span class="rb-label">Compound Interest</span><span class="rb-val" id="ci-interest-out">₹0</span></div>
-              <div class="rb-item total-row"><span class="rb-dot dot-total"></span><span class="rb-label">Total Value</span><span class="rb-val" id="ci-total-out">₹0</span></div>
-            </div>
-            <div class="donut-wrap"><canvas id="ci-chart" width="180" height="180"></canvas>
-              <div class="donut-legend"><span class="leg-item"><span class="leg-dot dot-principal"></span>Principal</span><span class="leg-item"><span class="leg-dot dot-interest"></span>Interest</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── 6. GST CALCULATOR ── -->
-    <div class="calc-panel" id="calc-gst">
-      <div class="calc-grid">
-        <div class="calc-inputs">
-          <h3 class="calc-title">GST Calculator</h3>
-          <p class="calc-desc">Calculate GST inclusive or exclusive price for goods &amp; services in India. See CGST &amp; SGST split instantly.</p>
-          <div class="input-group">
-            <label for="gst-amount">Enter Amount (₹)</label>
-            <input type="number" id="gst-amount" value="10000" min="1" step="1" />
-          </div>
-          <div class="input-group">
-            <label for="gst-rate">GST Rate (%)</label>
-            <select id="gst-rate" class="select-input">
-              <option value="5">5% – Essential goods</option>
-              <option value="12">12% – Standard goods</option>
-              <option value="18" selected>18% – Most services</option>
-              <option value="28">28% – Luxury &amp; sin goods</option>
-            </select>
-          </div>
-          <div class="input-group">
-            <label>Calculation Type</label>
-            <div class="radio-group">
-              <label class="radio-label"><input type="radio" name="gst-type" value="exclusive" checked /> GST Exclusive (add GST to amount)</label>
-              <label class="radio-label"><input type="radio" name="gst-type" value="inclusive" /> GST Inclusive (extract GST from amount)</label>
-            </div>
-          </div>
-        </div>
-        <div class="calc-results">
-          <div class="result-card gst-result-card">
-            <div class="gst-row"><span>Original Amount</span><span id="gst-original">₹0</span></div>
-            <div class="gst-row accent-row"><span id="gst-type-label">GST Amount (18%)</span><span id="gst-amount-out">₹0</span></div>
-            <div class="gst-row"><span>CGST</span><span id="gst-cgst">₹0</span></div>
-            <div class="gst-row"><span>SGST</span><span id="gst-sgst">₹0</span></div>
-            <div class="gst-row total-gst-row"><span id="gst-total-label">Total Amount (with GST)</span><span id="gst-total">₹0</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── 7. INCOME TAX CALCULATOR ── -->
-    <div class="calc-panel" id="calc-tax">
-      <div class="calc-grid calc-grid-tax">
-        <div class="calc-inputs">
-          <h3 class="calc-title">Income Tax Calculator – FY 2025-26</h3>
-          <p class="calc-desc">Compare Old vs New Tax Regime side by side. Enter your gross annual income and deductions to see which regime saves you more tax.</p>
-          <div class="input-group">
-            <label for="tax-income">Gross Annual Income (₹)</label>
-            <input type="number" id="tax-income" value="1200000" min="100000" max="100000000" step="10000" />
-            <input type="range" id="tax-income-r" min="100000" max="10000000" step="10000" value="1200000" class="slider" />
-            <div class="range-labels"><span>₹1L</span><span>₹1Cr</span></div>
-          </div>
-          <div class="input-group">
-            <label for="tax-deductions">Deductions – Sec 80C, 80D, HRA etc. (₹)</label>
-            <input type="number" id="tax-deductions" value="200000" min="0" max="5000000" step="5000" />
-            <p class="input-note">Deductions apply only under the Old Regime. The New Regime does not allow most deductions.</p>
-          </div>
-        </div>
-        <div class="calc-results">
-          <div class="tax-comparison">
-            <div class="tax-col">
-              <div class="tax-header new-regime">✨ New Regime</div>
-              <div class="tax-body">
-                <div class="tax-row"><span>Gross Income</span><span id="tax-new-gross">₹0</span></div>
-                <div class="tax-row"><span>Std. Deduction</span><span id="tax-new-std">-₹75,000</span></div>
-                <div class="tax-row"><span>Taxable Income</span><span id="tax-new-taxable">₹0</span></div>
-                <div class="tax-row"><span>Income Tax</span><span id="tax-new-tax">₹0</span></div>
-                <div class="tax-row"><span>Cess (4%)</span><span id="tax-new-cess">₹0</span></div>
-                <div class="tax-row tax-final"><span>Total Tax</span><span id="tax-new-total">₹0</span></div>
-              </div>
-            </div>
-            <div class="tax-col">
-              <div class="tax-header old-regime">📋 Old Regime</div>
-              <div class="tax-body">
-                <div class="tax-row"><span>Gross Income</span><span id="tax-old-gross">₹0</span></div>
-                <div class="tax-row"><span>Std. Deduction</span><span id="tax-old-std">-₹50,000</span></div>
-                <div class="tax-row"><span>Sec 80C/80D etc.</span><span id="tax-old-deductions">₹0</span></div>
-                <div class="tax-row"><span>Taxable Income</span><span id="tax-old-taxable">₹0</span></div>
-                <div class="tax-row"><span>Income Tax</span><span id="tax-old-tax">₹0</span></div>
-                <div class="tax-row"><span>Cess (4%)</span><span id="tax-old-cess">₹0</span></div>
-                <div class="tax-row tax-final"><span>Total Tax</span><span id="tax-old-total">₹0</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="tax-savings" id="tax-savings">
-            <span id="tax-savings-text">New Regime saves you ₹0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── 8. CURRENCY CONVERTER ── -->
-    <div class="calc-panel" id="calc-forex">
-      <div class="calc-grid">
-        <div class="calc-inputs">
-          <h3 class="calc-title">Currency Converter</h3>
-          <p class="calc-desc">Convert between major world currencies. Rates are indicative and approximate — always verify with your bank for actual transaction rates.</p>
-          <div class="input-group">
-            <label for="forex-amount">Amount</label>
-            <input type="number" id="forex-amount" value="1000" min="0.01" step="1" />
-          </div>
-          <div class="input-group">
-            <label for="forex-from">From Currency</label>
-            <select id="forex-from" class="select-input">
-              <option value="USD" selected>🇺🇸 USD – US Dollar</option>
-              <option value="EUR">🇪🇺 EUR – Euro</option>
-              <option value="GBP">🇬🇧 GBP – British Pound</option>
-              <option value="INR">🇮🇳 INR – Indian Rupee</option>
-              <option value="JPY">🇯🇵 JPY – Japanese Yen</option>
-              <option value="AUD">🇦🇺 AUD – Australian Dollar</option>
-              <option value="CAD">🇨🇦 CAD – Canadian Dollar</option>
-              <option value="SGD">🇸🇬 SGD – Singapore Dollar</option>
-              <option value="AED">🇦🇪 AED – UAE Dirham</option>
-              <option value="SAR">🇸🇦 SAR – Saudi Riyal</option>
-              <option value="CHF">🇨🇭 CHF – Swiss Franc</option>
-              <option value="CNY">🇨🇳 CNY – Chinese Yuan</option>
-            </select>
-          </div>
-          <div class="forex-swap-wrap">
-            <button class="forex-swap-btn" id="forex-swap" aria-label="Swap currencies">⇅ Swap</button>
-          </div>
-          <div class="input-group">
-            <label for="forex-to">To Currency</label>
-            <select id="forex-to" class="select-input">
-              <option value="USD">🇺🇸 USD – US Dollar</option>
-              <option value="EUR">🇪🇺 EUR – Euro</option>
-              <option value="GBP">🇬🇧 GBP – British Pound</option>
-              <option value="INR" selected>🇮🇳 INR – Indian Rupee</option>
-              <option value="JPY">🇯🇵 JPY – Japanese Yen</option>
-              <option value="AUD">🇦🇺 AUD – Australian Dollar</option>
-              <option value="CAD">🇨🇦 CAD – Canadian Dollar</option>
-              <option value="SGD">🇸🇬 SGD – Singapore Dollar</option>
-              <option value="AED">🇦🇪 AED – UAE Dirham</option>
-              <option value="SAR">🇸🇦 SAR – Saudi Riyal</option>
-              <option value="CHF">🇨🇭 CHF – Swiss Franc</option>
-              <option value="CNY">🇨🇳 CNY – Chinese Yuan</option>
-            </select>
-          </div>
-        </div>
-        <div class="calc-results">
-          <div class="result-card forex-result-card">
-            <div class="forex-result-box">
-              <span class="forex-from-label" id="forex-from-label">1,000 USD</span>
-              <span class="forex-equals">=</span>
-              <span class="forex-to-value" id="forex-result">₹85,500.00</span>
-            </div>
-            <div class="forex-rate-info" id="forex-rate-display">1 USD = ₹85.50 | 1 INR = $0.0117</div>
-            <div class="forex-disclaimer">⚠️ Rates are indicative only. Actual bank rates may differ.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </section>
 
   <!-- ═══ AD 2 ═══ -->
@@ -583,27 +228,27 @@
     <div class="faq-grid">
       <div class="faq-item">
         <h3>How is Home Loan EMI calculated?</h3>
-        <p>EMI = P &times; r &times; (1+r)<sup>n</sup> / ((1+r)<sup>n</sup> – 1). P = loan amount, r = monthly interest rate (annual rate ÷ 12 ÷ 100), n = total months (years × 12). A ₹40L loan at 8.5% for 20 years gives ~₹34,700/month EMI.</p>
+        <p>EMI is calculated using the principal loan amount (P), the monthly interest rate (r), and the tenure in months (n) with the compound formula: [P × r × (1+r)^n] / [(1+r)^n - 1]. For example, a ₹40L loan at 8.5% for 20 years yields an EMI of approximately ₹34,700/month.</p>
       </div>
       <div class="faq-item">
         <h3>What is SIP and how does compounding help?</h3>
-        <p>SIP (Systematic Investment Plan) lets you invest a fixed monthly amount in mutual funds. Thanks to compounding, even ₹5,000/month at 12% annual returns grows to ~₹11.6 lakhs in 10 years — of which only ₹6 lakhs is your investment and ₹5.6 lakhs is wealth gained.</p>
+        <p>SIP (Systematic Investment Plan) allows you to invest a fixed monthly sum in mutual funds instead of a lumpsum. Over time, earnings from your units are reinvested. Compounding ensures even ₹5,000/month at a 12% annual return grows to ₹11.6 Lakhs in 10 years, where ₹5.6 Lakhs is pure interest profit.</p>
       </div>
       <div class="faq-item">
         <h3>What is the current PPF interest rate?</h3>
-        <p>The PPF interest rate is 7.1% p.a. (as of FY 2025-26), set by the Government of India and reviewed quarterly. PPF has a 15-year lock-in, ₹1.5 lakh/year maximum, and enjoys EEE tax status (Exempt-Exempt-Exempt).</p>
+        <p>The PPF interest rate is 7.1% p.a. (as of FY 2025-26), set by the Government of India and reviewed quarterly. PPF has a 15-year lock-in, ₹1.5 Lakhs annual investment limit, and enjoys EEE tax status (exempt from investment, accumulation, and withdrawal taxes).</p>
       </div>
       <div class="faq-item">
         <h3>Old Tax Regime vs New Tax Regime — which is better?</h3>
-        <p>The New Regime offers lower slab rates (5%-30%) but no deductions (except ₹75K standard). The Old Regime allows deductions under 80C (₹1.5L), 80D, HRA, etc. If your total deductions exceed ~₹3.75L, the Old Regime may save more. Use our calculator to compare.</p>
+        <p>The New Regime offers lower tax rates (5% to 30%) but disqualifies deductions. The Old Regime offers higher rates but allows HRA, Sec 80C, 80D, and home loan interest deductions. Salaried individuals generally benefit more from the New Regime unless their tax-saving deductions exceed ₹3.75 Lakhs.</p>
       </div>
       <div class="faq-item">
-        <h3>How is GST calculated?</h3>
-        <p>GST Exclusive: Add GST to the original price. ₹10,000 + 18% GST = ₹11,800. GST Inclusive: Extract GST from the total. ₹11,800 inclusive of 18% GST means original = ₹10,000, GST = ₹1,800. CGST and SGST are each half the GST amount for intra-state transactions.</p>
+        <h3>How is GST calculated in India?</h3>
+        <p>GST Exclusive adds tax to the base price: ₹10,000 + 18% GST = ₹11,800 total. GST Inclusive extracts tax from the total price: ₹11,800 inclusive of 18% GST means the base price is ₹10,000 and the GST amount is ₹1,800. Intra-state trades split the GST equally into CGST and SGST.</p>
       </div>
       <div class="faq-item">
         <h3>Is the currency converter accurate?</h3>
-        <p>Our currency converter provides indicative mid-market rates for reference only. Actual exchange rates from banks and forex services may differ due to margins, fees, and real-time market fluctuations. Always confirm with your bank before transacting.</p>
+        <p>Our currency converter provides indicative mid-market exchange rates for reference. When executing actual forex bank transfers or card payments, providers apply markups and transaction margins. Always verify final transaction rates with your bank.</p>
       </div>
     </div>
   </section>
@@ -654,14 +299,14 @@
       <div class="footer-links-group">
         <h4>Calculators</h4>
         <ul>
-          <li><a href="#tools" onclick="switchCalc('emi')">EMI Calculator</a></li>
-          <li><a href="#tools" onclick="switchCalc('sip')">SIP Calculator</a></li>
-          <li><a href="#tools" onclick="switchCalc('fd')">FD Calculator</a></li>
-          <li><a href="#tools" onclick="switchCalc('ppf')">PPF Calculator</a></li>
-          <li><a href="#tools" onclick="switchCalc('ci')">Compound Interest</a></li>
-          <li><a href="#tools" onclick="switchCalc('gst')">GST Calculator</a></li>
-          <li><a href="#tools" onclick="switchCalc('tax')">Income Tax</a></li>
-          <li><a href="#tools" onclick="switchCalc('forex')">Currency Converter</a></li>
+          <li><a href="/emi-calculator.html">EMI Calculator</a></li>
+          <li><a href="/sip-calculator.html">SIP Calculator</a></li>
+          <li><a href="/fd-calculator.html">FD Calculator</a></li>
+          <li><a href="/ppf-calculator.html">PPF Calculator</a></li>
+          <li><a href="/compound-interest-calculator.html">Compound Interest</a></li>
+          <li><a href="/gst-calculator.html">GST Calculator</a></li>
+          <li><a href="/income-tax-calculator.html">Income Tax</a></li>
+          <li><a href="/currency-converter.html">Currency Converter</a></li>
         </ul>
       </div>
       <div class="footer-links-group">
@@ -669,14 +314,15 @@
         <ul>
           <li><a href="https://faidence.com" target="_blank" rel="noopener">Main Website</a></li>
           <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener">Online Tutoring</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="#disclaimer">Disclaimer</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Faidence Finance. All rights reserved. | <a href="privacy.html">Privacy</a> | <a href="#disclaimer">Disclaimer</a> | Not financial advice.</p>
+      <p>&copy; 2026 Faidence Finance. All rights reserved. | <a href="/privacy.html">Privacy</a> | <a href="/terms.html">Terms</a> | Not financial advice.</p>
     </div>
   </footer>
 

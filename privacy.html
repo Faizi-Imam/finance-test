@@ -7,35 +7,30 @@
   <meta name="description" content="Faidence Finance Privacy Policy – how we handle your data on our free financial calculator tools." />
   <link rel="canonical" href="https://finance.faidence.com/privacy.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2401176048519015" crossorigin="anonymous"></script>
-  <style>
-    .privacy-wrap { max-width: 800px; margin: 0 auto; padding: 5rem 2rem 4rem; }
-    .privacy-wrap h1 { font-size: 2.4rem; font-weight: 900; margin-bottom: 0.4rem; letter-spacing: -1px; }
-    .privacy-wrap .updated { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2.5rem; }
-    .privacy-wrap h2 { font-size: 1.2rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.6rem; color: var(--accent, #3b82f6); }
-    .privacy-wrap p, .privacy-wrap li { color: var(--text-muted, #94a3b8); font-size: 0.95rem; line-height: 1.8; margin-bottom: 0.6rem; }
-    .privacy-wrap ul { padding-left: 1.5rem; }
-    .privacy-wrap a { color: var(--accent, #3b82f6); text-decoration: none; }
-    .privacy-wrap a:hover { text-decoration: underline; }
-    .privacy-wrap strong { color: var(--text, #f1f5f9); }
-  </style>
 </head>
 <body>
-  <nav class="navbar" id="navbar">
+
+  <!-- ════════════ NAVBAR ════════════ -->
+  <nav class="navbar scrolled" id="navbar">
     <div class="nav-inner">
-      <a href="/" class="logo"><span class="logo-icon">₹</span>Faidence <span class="logo-fin">Finance</span></a>
+      <a href="/" class="logo" aria-label="Home"><span class="logo-icon">₹</span>Faidence <span class="logo-fin">Finance</span></a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="/">Home</a></li>
         <li><a href="/#tools">Tools</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="privacy.html" class="active">Privacy</a></li>
         <li><a href="/#disclaimer">Disclaimer</a></li>
+        <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener" class="nav-tutor-link">🎓 Tutoring</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
     </div>
   </nav>
 
-  <div class="privacy-wrap">
+  <!-- ════════════ CONTENT AREA ════════════ -->
+  <main class="info-page-wrap">
     <h1>Privacy Policy</h1>
     <p class="updated">Last updated: June 2026</p>
 
@@ -87,18 +82,45 @@
       <li>Email: <a href="mailto:hello@faidence.com">hello@faidence.com</a></li>
       <li>Website: <a href="https://faidence.com">faidence.com</a></li>
     </ul>
-  </div>
+  </main>
 
+  <!-- ════════════ FOOTER ════════════ -->
   <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo"><span class="logo-icon">₹</span>Faidence <span class="logo-fin">Finance</span></a>
+        <p>Free financial calculators for India.<br>No signup. No data stored. Always free.<br>Updated for FY 2025-26.</p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/emi-calculator.html">EMI Calculator</a></li>
+          <li><a href="/sip-calculator.html">SIP Calculator</a></li>
+          <li><a href="/fd-calculator.html">FD Calculator</a></li>
+          <li><a href="/ppf-calculator.html">PPF Calculator</a></li>
+          <li><a href="/compound-interest-calculator.html">Compound Interest</a></li>
+          <li><a href="/gst-calculator.html">GST Calculator</a></li>
+          <li><a href="/income-tax-calculator.html">Income Tax</a></li>
+          <li><a href="/currency-converter.html">Currency Converter</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Faidence</h4>
+        <ul>
+          <li><a href="https://faidence.com" target="_blank" rel="noopener">Main Website</a></li>
+          <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener">Online Tutoring</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Faidence Finance. All rights reserved. | <a href="/">Home</a> | <a href="/#disclaimer">Disclaimer</a></p>
+      <p>&copy; 2026 Faidence Finance. All rights reserved. | <a href="/privacy.html">Privacy</a> | <a href="/terms.html">Terms</a> | Not financial advice.</p>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('hamburger').addEventListener('click', () => {
-      document.getElementById('nav-links').classList.toggle('open');
-    });
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>

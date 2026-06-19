@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google AdSense - Verified and Configured -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2401176048519015" crossorigin="anonymous"></script>
+  
+  <title>Income Tax Calculator India FY 2025-26 – Old vs New Regime | Faidence Finance</title>
+  <meta name="description" content="Calculate and compare your income tax liability under the Old vs New Tax Regime for FY 2025-26 (AY 2026-27). Account for standard deductions, rebates, and slabs." />
+  <link rel="canonical" href="https://finance.faidence.com/income-tax-calculator.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════════════ NAVBAR ════════════ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Home"><span class="logo-icon">₹</span>Faidence <span class="logo-fin">Finance</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#tools">Tools</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="/#disclaimer">Disclaimer</a></li>
+        <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener" class="nav-tutor-link">🎓 Tutoring</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ════════════ PAGE HEADER ════════════ -->
+  <header class="calc-page-header">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">&gt;</span>
+      <a href="/#tools">Calculators</a>
+      <span class="breadcrumb-sep">&gt;</span>
+      <span>Income Tax Calculator</span>
+    </div>
+    <h1>Income Tax Calculator – FY 2025-26</h1>
+    <p>Compare tax liabilities under the Old and New Tax Regimes side-by-side to choose the optimal filing strategy.</p>
+  </header>
+
+  <!-- ════════════ TWO-COLUMN LAYOUT ════════════ -->
+  <div class="calc-layout-container">
+    
+    <!-- LEFT COLUMN (Calculator + Content) -->
+    <div class="calc-main-col">
+      
+      <!-- Strategic Ad Placement: Above the Fold -->
+      <div class="ad-slot-above-fold">
+        <span class="ad-tag-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2401176048519015"
+             data-ad-slot="8857410023"
+             data-ad-format="horizontal"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Interactive Calculator Panel -->
+      <div class="calc-panel active" id="calc-tax" style="padding: 0; background: transparent; border: none;">
+        <div class="calc-grid calc-grid-tax">
+          <div class="calc-inputs">
+            <h3 class="calc-title">Taxpayer Details</h3>
+            <p class="calc-desc">Enter your annual gross salary and total exemptions/deductions (HRA, Section 80C, etc.) to estimate tax liabilities.</p>
+            <div class="input-group">
+              <label for="tax-income">Gross Annual Income (₹)</label>
+              <input type="number" id="tax-income" value="1200000" min="100000" max="100000000" step="10000" />
+              <input type="range" id="tax-income-r" min="100000" max="10000000" step="10000" value="1200000" class="slider" />
+              <div class="range-labels"><span>₹1L</span><span>₹1Cr</span></div>
+            </div>
+            <div class="input-group">
+              <label for="tax-deductions">Deductions – Sec 80C, 80D, HRA etc. (₹)</label>
+              <input type="number" id="tax-deductions" value="200000" min="0" max="5000000" step="5000" />
+              <p class="input-note">Deductions apply only under the Old Regime. The New Regime does not allow most deductions.</p>
+            </div>
+          </div>
+          <div class="calc-results">
+            <div class="tax-comparison">
+              <div class="tax-col">
+                <div class="tax-header new-regime">✨ New Regime</div>
+                <div class="tax-body">
+                  <div class="tax-row"><span>Gross Income</span><span id="tax-new-gross">₹0</span></div>
+                  <div class="tax-row"><span>Std. Deduction</span><span id="tax-new-std">-₹75,000</span></div>
+                  <div class="tax-row"><span>Taxable Income</span><span id="tax-new-taxable">₹0</span></div>
+                  <div class="tax-row"><span>Income Tax</span><span id="tax-new-tax">₹0</span></div>
+                  <div class="tax-row"><span>Cess (4%)</span><span id="tax-new-cess">₹0</span></div>
+                  <div class="tax-row tax-final"><span>Total Tax</span><span id="tax-new-total">₹0</span></div>
+                </div>
+              </div>
+              <div class="tax-col">
+                <div class="tax-header old-regime">📋 Old Regime</div>
+                <div class="tax-body">
+                  <div class="tax-row"><span>Gross Income</span><span id="tax-old-gross">₹0</span></div>
+                  <div class="tax-row"><span>Std. Deduction</span><span id="tax-old-std">-₹50,000</span></div>
+                  <div class="tax-row"><span>Sec 80C/80D etc.</span><span id="tax-old-deductions">₹0</span></div>
+                  <div class="tax-row"><span>Taxable Income</span><span id="tax-old-taxable">₹0</span></div>
+                  <div class="tax-row"><span>Income Tax</span><span id="tax-old-tax">₹0</span></div>
+                  <div class="tax-row"><span>Cess (4%)</span><span id="tax-old-cess">₹0</span></div>
+                  <div class="tax-row tax-final"><span>Total Tax</span><span id="tax-old-total">₹0</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="tax-savings" id="tax-savings" style="margin-top: 20px;">
+              <span id="tax-savings-text">New Regime saves you ₹0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strategic Ad Placement: Results-Adjacent -->
+      <div class="ad-slot-results-adjacent">
+        <span class="ad-tag-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-2401176048519015"
+             data-ad-slot="9854120352"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Educational Guide Content -->
+      <article class="calc-guide-content">
+        <h2>Old vs New Tax Regime – Slabs for FY 2025-26</h2>
+        <p>In India, taxpayers can choose between two tax systems. The **Old Tax Regime** permits standard deductions (Section 80C, 80D, HRA, home loan interest, etc.) but has higher slab rates. The **New Tax Regime** offers lower slab rates and a higher rebate limit, but requires you to forfeit almost all deductions.</p>
+        
+        <h3>Tax Slab Slabs (FY 2025-26 / AY 2026-27)</h3>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+          <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 16px;">
+            <h4 style="color: #3b82f6; margin-bottom: 12px; font-weight: 700;">✨ New Tax Slabs</h4>
+            <table class="tax-slab-table">
+              <thead><tr><th>Income Slabs</th><th>Tax Rate</th></tr></thead>
+              <tbody>
+                <tr><td>Up to ₹4,00,000</td><td>Nil</td></tr>
+                <tr><td>₹4,00,001 – ₹8,00,000</td><td>5%</td></tr>
+                <tr><td>₹8,00,001 – ₹12,00,000</td><td>10%</td></tr>
+                <tr><td>₹12,00,001 – ₹16,00,000</td><td>15%</td></tr>
+                <tr><td>₹16,00,001 – ₹20,00,000</td><td>20%</td></tr>
+                <tr><td>₹20,00,001 – ₹24,00,000</td><td>25%</td></tr>
+                <tr><td>Above ₹24,00,000</td><td>30%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 16px;">
+            <h4 style="color: #f59e0b; margin-bottom: 12px; font-weight: 700;">📋 Old Tax Slabs</h4>
+            <table class="tax-slab-table">
+              <thead><tr><th>Income Slabs</th><th>Tax Rate</th></tr></thead>
+              <tbody>
+                <tr><td>Up to ₹2,50,000</td><td>Nil</td></tr>
+                <tr><td>₹2,50,001 – ₹5,00,000</td><td>5%</td></tr>
+                <tr><td>₹5,00,001 – ₹10,00,000</td><td>20%</td></tr>
+                <tr><td>Above ₹10,00,000</td><td>30%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h3>Standard Deductions and Rebate Section 87A</h3>
+        <ul>
+          <li><strong>Standard Deduction:</strong> Salaried employees get a standard deduction of **₹75,000** under the New Regime and **₹50,000** under the Old Regime for FY 2025-26.</li>
+          <li><strong>Rebate Limit:</strong> Under Section 87A, you pay zero tax if your taxable income does not exceed **₹12,00,000** in the New Regime. In the Old Regime, the rebate threshold is set much lower at **₹5,00,000**.</li>
+          <li><strong>Health and Education Cess:</strong> A flat **4% cess** is added to the calculated tax liability under both regimes.</li>
+        </ul>
+
+        <h3>Step-by-Step Example Comparison</h3>
+        <p>Suppose your Gross Salary is <strong>₹12,00,000</strong> and you have <strong>₹2,00,000</strong> in exemptions (80C investments, health insurance, HRA, etc.).</p>
+        
+        <h4>1. New Tax Regime Calculation:</h4>
+        <ol>
+          <li>Apply Standard Deduction: ₹12,00,000 - ₹75,000 = <strong>₹11,25,000 (Taxable Income)</strong>.</li>
+          <li>Since taxable income is below the rebate threshold of ₹12,00,000, you qualify for full rebate under Section 87A.</li>
+          <li><strong>Total Tax Payable = ₹0</strong>.</li>
+        </ol>
+
+        <h4>2. Old Tax Regime Calculation:</h4>
+        <ol>
+          <li>Apply Standard Deduction and Exemptions: ₹12,00,000 - ₹50,000 - ₹2,00,000 = <strong>₹9,50,000 (Taxable Income)</strong>.</li>
+          <li>Apply Old Regime tax slabs:
+            <br>- Up to ₹2.5L: Nil
+            <br>- ₹2.5L to ₹5L (5% of 2.5L): ₹12,500
+            <br>- ₹5L to ₹9.5L (20% of 4.5L): ₹90,000
+            <br>- Base Tax = ₹12,500 + ₹90,000 = <strong>₹1,02,500</strong>.
+          </li>
+          <li>Add Cess (4%): 1,02,500 × 0.04 = ₹4,100.</li>
+          <li><strong>Total Tax Payable = ₹1,06,600</strong>.</li>
+        </ol>
+        <p>In this case, the **New Regime saves you ₹1,06,600** in tax payments. In general, unless your tax-deductible investments exceed ₹3.75 Lakhs, the New Regime is more beneficial for most taxpayers.</p>
+      </article>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" style="padding: 0; margin: 0;">
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: #f1f5f9; margin-bottom: 24px;">Frequently Asked Questions</h2>
+        <div class="faq-grid" style="grid-template-columns: 1fr; gap: 16px;">
+          <div class="faq-item">
+            <h3>Can I switch tax regimes every year?</h3>
+            <p>Salaried taxpayers with no business income can choose their preferred tax regime every financial year at the time of filing their Income Tax Return (ITR). However, individuals with business or professional income can only switch regimes once in a lifetime.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What is the default tax regime in India?</h3>
+            <p>From FY 2023-24 onwards, the **New Tax Regime is the default tax regime**. If you want to file your taxes using the Old Regime, you must actively opt-in by submitting Form 10-IEA before filing your ITR.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is HRA deduction allowed under the New Tax Regime?</h3>
+            <p>No. House Rent Allowance (HRA), Section 80C (PPF, LIC, EPF, ELSS, School Fees), Section 80D (Health Insurance premium), and home loan interest on self-occupied property (Section 24b) are **not allowed** as deductions under the New Regime.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- RIGHT COLUMN (Sidebar) -->
+    <aside class="calc-sidebar-col">
+      
+      <!-- Quick Navigation -->
+      <div class="sidebar-widget">
+        <h4>All Financial Calculators</h4>
+        <div class="sidebar-links">
+          <a href="/emi-calculator.html"><span class="sidebar-icon-span">🏠</span> EMI Calculator</a>
+          <a href="/sip-calculator.html"><span class="sidebar-icon-span">📈</span> SIP Calculator</a>
+          <a href="/fd-calculator.html"><span class="sidebar-icon-span">🏦</span> FD Calculator</a>
+          <a href="/ppf-calculator.html"><span class="sidebar-icon-span">🇮🇳</span> PPF Calculator</a>
+          <a href="/compound-interest-calculator.html"><span class="sidebar-icon-span">💹</span> Compound Interest</a>
+          <a href="/gst-calculator.html"><span class="sidebar-icon-span">🧾</span> GST Calculator</a>
+          <a href="/income-tax-calculator.html" class="active"><span class="sidebar-icon-span">📋</span> Income Tax</a>
+          <a href="/currency-converter.html"><span class="sidebar-icon-span">💱</span> Currency Converter</a>
+        </div>
+      </div>
+
+      <!-- Sticky Sidebar Ad Slot -->
+      <div class="ad-slot-sidebar">
+        <span class="ad-tag-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2401176048519015"
+             data-ad-slot="1245789632"
+             data-ad-format="rectangle, vertical"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Tutoring Widget -->
+      <div class="sidebar-widget" style="border-left: 3px solid #10b981;">
+        <h4 style="color: #10b981;">Need Academic Help?</h4>
+        <p style="font-size: 0.82rem; color: #94a3b8; line-height: 1.5; margin-bottom: 16px;">Connect with certified experts for 1-on-1 tutoring sessions in Math, Accounting, or Finance.</p>
+        <a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener" class="btn-tutor-cta" style="display: block; text-align: center; font-size: 0.8rem; padding: 10px;">Find a Tutor</a>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Related Tools Footer -->
+  <section class="related-tools-section">
+    <h3>Related Calculators</h3>
+    <div class="related-grid">
+      <div class="related-card">
+        <span class="related-card-icon">🧾</span>
+        <h4 class="related-card-title">GST Calculator</h4>
+        <p class="related-card-desc">Calculate inclusive & exclusive GST and see CGST/SGST splits.</p>
+        <a href="/gst-calculator.html" class="related-card-link">Calculate GST →</a>
+      </div>
+      <div class="related-card">
+        <span class="related-card-icon">🇮🇳</span>
+        <h4 class="related-card-title">PPF Calculator</h4>
+        <p class="related-card-desc">Plan risk-free investments backed by the Government of India with EEE tax status.</p>
+        <a href="/ppf-calculator.html" class="related-card-link">Calculate PPF →</a>
+      </div>
+      <div class="related-card">
+        <span class="related-card-icon">🏠</span>
+        <h4 class="related-card-title">EMI Calculator</h4>
+        <p class="related-card-desc">Calculate loan instalments, interest payable and loan details.</p>
+        <a href="/emi-calculator.html" class="related-card-link">Calculate EMI →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FOOTER ════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo"><span class="logo-icon">₹</span>Faidence <span class="logo-fin">Finance</span></a>
+        <p>Free financial calculators for India.<br>No signup. No data stored. Always free.<br>Updated for FY 2025-26.</p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/emi-calculator.html">EMI Calculator</a></li>
+          <li><a href="/sip-calculator.html">SIP Calculator</a></li>
+          <li><a href="/fd-calculator.html">FD Calculator</a></li>
+          <li><a href="/ppf-calculator.html">PPF Calculator</a></li>
+          <li><a href="/compound-interest-calculator.html">Compound Interest</a></li>
+          <li><a href="/gst-calculator.html">GST Calculator</a></li>
+          <li><a href="/income-tax-calculator.html">Income Tax</a></li>
+          <li><a href="/currency-converter.html">Currency Converter</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Faidence</h4>
+        <ul>
+          <li><a href="https://faidence.com" target="_blank" rel="noopener">Main Website</a></li>
+          <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener">Online Tutoring</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Faidence Finance. All rights reserved. | <a href="/privacy.html">Privacy</a> | <a href="/terms.html">Terms</a> | Not financial advice.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

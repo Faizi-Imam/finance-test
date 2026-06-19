@@ -39,6 +39,7 @@ window.addEventListener('scroll', function () {
 function switchCalc(name) {
   var cards = document.querySelectorAll('.tool-card');
   var panels = document.querySelectorAll('.calc-panel');
+  if (cards.length === 0 && panels.length === 0) return;
 
   cards.forEach(function (card) {
     if (card.getAttribute('data-calc') === name) {
@@ -139,6 +140,7 @@ function syncPair(inputId, sliderId, calcFn) {
 
 /* ─── 1. EMI Calculator ─── */
 function calcEMI() {
+  if (!el('emi-principal')) return;
   var P = parseFloat(el('emi-principal').value) || 0;
   var annualRate = parseFloat(el('emi-rate').value) || 0;
   var years = parseFloat(el('emi-tenure').value) || 0;
@@ -171,6 +173,7 @@ function calcEMI() {
 
 /* ─── 2. SIP Calculator ─── */
 function calcSIP() {
+  if (!el('sip-amount')) return;
   var P = parseFloat(el('sip-amount').value) || 0;
   var annualRate = parseFloat(el('sip-rate').value) || 0;
   var years = parseFloat(el('sip-tenure').value) || 0;
@@ -199,6 +202,7 @@ function calcSIP() {
 
 /* ─── 3. FD Calculator ─── */
 function calcFD() {
+  if (!el('fd-principal')) return;
   var P = parseFloat(el('fd-principal').value) || 0;
   var annualRate = parseFloat(el('fd-rate').value) || 0;
   var years = parseFloat(el('fd-tenure').value) || 0;
@@ -218,6 +222,7 @@ function calcFD() {
 
 /* ─── 4. PPF Calculator ─── */
 function calcPPF() {
+  if (!el('ppf-annual')) return;
   var annual = parseFloat(el('ppf-annual').value) || 0;
   var tenure = parseInt(el('ppf-tenure').value) || 0;
   var rate = 0.071; /* Fixed PPF rate 7.1% */
@@ -240,6 +245,7 @@ function calcPPF() {
 
 /* ─── 5. Compound Interest Calculator ─── */
 function calcCI() {
+  if (!el('ci-principal')) return;
   var P = parseFloat(el('ci-principal').value) || 0;
   var annualRate = parseFloat(el('ci-rate').value) || 0;
   var years = parseFloat(el('ci-tenure').value) || 0;
@@ -259,6 +265,7 @@ function calcCI() {
 
 /* ─── 6. GST Calculator ─── */
 function calcGST() {
+  if (!el('gst-amount')) return;
   var amount = parseFloat(el('gst-amount').value) || 0;
   var rateEl = el('gst-rate');
   var rate = rateEl ? parseFloat(rateEl.value) || 18 : 18;
@@ -295,6 +302,7 @@ function calcGST() {
 
 /* ─── 7. Income Tax Calculator ─── */
 function calcTax() {
+  if (!el('tax-income')) return;
   var income = parseFloat(el('tax-income').value) || 0;
   var deductions = parseFloat(el('tax-deductions').value) || 0;
 
@@ -421,6 +429,7 @@ var currencySymbols = {
 };
 
 function calcForex() {
+  if (!el('forex-amount')) return;
   var amount = parseFloat(el('forex-amount').value) || 0;
   var fromEl = el('forex-from');
   var toEl = el('forex-to');

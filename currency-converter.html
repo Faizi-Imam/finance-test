@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google AdSense - Verified and Configured -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2401176048519015" crossorigin="anonymous"></script>
+  
+  <title>Currency Converter – Live Indicative Forex Exchange Rates | Faidence Finance</title>
+  <meta name="description" content="Convert major global currencies (USD, EUR, GBP, INR, JPY, AUD, CAD) instantly. Check current indicative mid-market exchange rates and foreign transaction spreads." />
+  <link rel="canonical" href="https://finance.faidence.com/currency-converter.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════════════ NAVBAR ════════════ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Home"><span class="logo-icon">₹</span>Faidence <span class="logo-fin">Finance</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#tools">Tools</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="/#disclaimer">Disclaimer</a></li>
+        <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener" class="nav-tutor-link">🎓 Tutoring</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ════════════ PAGE HEADER ════════════ -->
+  <header class="calc-page-header">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">&gt;</span>
+      <a href="/#tools">Calculators</a>
+      <span class="breadcrumb-sep">&gt;</span>
+      <span>Currency Converter</span>
+    </div>
+    <h1>Currency Converter</h1>
+    <p>Convert major international currencies and estimate conversion payouts based on current mid-market rates.</p>
+  </header>
+
+  <!-- ════════════ TWO-COLUMN LAYOUT ════════════ -->
+  <div class="calc-layout-container">
+    
+    <!-- LEFT COLUMN (Calculator + Content) -->
+    <div class="calc-main-col">
+      
+      <!-- Strategic Ad Placement: Above the Fold -->
+      <div class="ad-slot-above-fold">
+        <span class="ad-tag-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2401176048519015"
+             data-ad-slot="8857410023"
+             data-ad-format="horizontal"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Interactive Calculator Panel -->
+      <div class="calc-panel active" id="calc-forex" style="padding: 0; background: transparent; border: none;">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <h3 class="calc-title">Conversion Details</h3>
+            <p class="calc-desc">Enter the amount, select the source currency and target currency to view the converted value.</p>
+            <div class="input-group">
+              <label for="forex-amount">Amount</label>
+              <input type="number" id="forex-amount" value="1000" min="0.01" step="1" />
+            </div>
+            <div class="input-group">
+              <label for="forex-from">From Currency</label>
+              <select id="forex-from" class="select-input">
+                <option value="USD" selected>🇺🇸 USD – US Dollar</option>
+                <option value="EUR">🇪🇺 EUR – Euro</option>
+                <option value="GBP">🇬🇧 GBP – British Pound</option>
+                <option value="INR">🇮🇳 INR – Indian Rupee</option>
+                <option value="JPY">🇯🇵 JPY – Japanese Yen</option>
+                <option value="AUD">🇦🇺 AUD – Australian Dollar</option>
+                <option value="CAD">🇨🇦 CAD – Canadian Dollar</option>
+                <option value="SGD">🇸🇬 SGD – Singapore Dollar</option>
+                <option value="AED">🇦🇪 AED – UAE Dirham</option>
+                <option value="SAR">🇸🇦 SAR – Saudi Riyal</option>
+                <option value="CHF">🇨🇭 CHF – Swiss Franc</option>
+                <option value="CNY">🇨🇳 CNY – Chinese Yuan</option>
+              </select>
+            </div>
+            <div class="forex-swap-wrap">
+              <button class="forex-swap-btn" id="forex-swap" aria-label="Swap currencies">⇅ Swap</button>
+            </div>
+            <div class="input-group">
+              <label for="forex-to">To Currency</label>
+              <select id="forex-to" class="select-input">
+                <option value="USD">🇺🇸 USD – US Dollar</option>
+                <option value="EUR">🇪🇺 EUR – Euro</option>
+                <option value="GBP">🇬🇧 GBP – British Pound</option>
+                <option value="INR" selected>🇮🇳 INR – Indian Rupee</option>
+                <option value="JPY">🇯🇵 JPY – Japanese Yen</option>
+                <option value="AUD">🇦🇺 AUD – Australian Dollar</option>
+                <option value="CAD">🇨🇦 CAD – Canadian Dollar</option>
+                <option value="SGD">🇸🇬 SGD – Singapore Dollar</option>
+                <option value="AED">🇦🇪 AED – UAE Dirham</option>
+                <option value="SAR">🇸🇦 SAR – Saudi Riyal</option>
+                <option value="CHF">🇨🇭 CHF – Swiss Franc</option>
+                <option value="CNY">🇨🇳 CNY – Chinese Yuan</option>
+              </select>
+            </div>
+          </div>
+          <div class="calc-results">
+            <div class="result-card forex-result-card" style="margin-top: 0;">
+              <div class="forex-result-box">
+                <span class="forex-from-label" id="forex-from-label">1,000 USD</span>
+                <span class="forex-equals">=</span>
+                <span class="forex-to-value" id="forex-result">₹85,500.00</span>
+              </div>
+              <div class="forex-rate-info" id="forex-rate-display">1 USD = ₹85.50 | 1 INR = $0.0117</div>
+              <div class="forex-disclaimer">⚠️ Rates are indicative only. Actual bank rates may differ.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strategic Ad Placement: Results-Adjacent -->
+      <div class="ad-slot-results-adjacent">
+        <span class="ad-tag-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-2401176048519015"
+             data-ad-slot="9854120352"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Educational Guide Content -->
+      <article class="calc-guide-content">
+        <h2>How Currency Conversion Works</h2>
+        <p>A **Currency Converter** calculates the equivalent value of one currency in another based on their respective exchange rates. The exchange rate is the price of one nation's currency in terms of another currency.</p>
+        
+        <h3>The Mid-Market Exchange Rate</h3>
+        <p>The rate shown in this converter is the **mid-market exchange rate** (also known as the interbank rate). This is the midpoint between the buy and sell rates on global currency markets. 
+        <ul>
+          <li><strong>Bid Rate:</strong> The maximum price that a buyer is willing to pay for a currency.</li>
+          <li><strong>Ask Rate:</strong> The minimum price that a seller is willing to accept for a currency.</li>
+          <li>The mid-market rate is highly transparent, but it is **not** the rate you get when exchanging money at a bank, airport booth, or card processor.</li>
+        </ul>
+        </p>
+
+        <h3>Understanding Transaction Markups &amp; Spreads</h3>
+        <p>When you exchange cash or make international payments, service providers add a markup to the interbank rate to cover operational costs and make a profit.
+        <ol>
+          <li><strong>Bank Margins:</strong> Traditional banks charge a currency markup ranging from 2% to 5% above the mid-market rate.</li>
+          <li><strong>Credit Card Markups:</strong> Major credit card networks (Visa, Mastercard) charge a foreign transaction fee or currency markup of 1% to 3.5%.</li>
+          <li><strong>Specialist Services:</strong> Modern fintech transfer platforms offer rates closer to the mid-market with transparent flat fees.</li>
+        </ol>
+        </p>
+
+        <h3>Step-by-Step Example Calculation</h3>
+        <p>Suppose you want to convert <strong>$1,000 USD</strong> to <strong>INR</strong>. The nominal exchange rate is <strong>1 USD = ₹85.50</strong>.</p>
+        <ul>
+          <li><strong>Interbank Conversion:</strong> 1,000 USD × 85.50 = <strong>₹85,500</strong>.</li>
+          <li><strong>Bank Conversion (with 3.5% markup):</strong>
+            <br>- Effective rate: 85.50 × (1 - 0.035) = ₹82.5075 per USD.
+            <br>- Final payout: 1,000 USD × 82.5075 = <strong>₹82,507.50</strong>.
+            <br>- Total markup fee paid = ₹85,500 - ₹82,507.50 = <strong>₹2,992.50</strong>.
+          </li>
+        </ul>
+      </article>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" style="padding: 0; margin: 0;">
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: #f1f5f9; margin-bottom: 24px;">Frequently Asked Questions</h2>
+        <div class="faq-grid" style="grid-template-columns: 1fr; gap: 16px;">
+          <div class="faq-item">
+            <h3>Why do currency exchange rates fluctuate constantly?</h3>
+            <p>Exchange rates are floating and determined by demand and supply in international foreign exchange (forex) markets. Key drivers include interest rate changes by central banks (like the US Fed or RBI), inflation rates, trade balance sheets, economic growth, and geopolitical stability.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is this converter updated in real-time?</h3>
+            <p>Our converter uses indicative rates updated periodically. It is suitable for general planning, estimates, and educational purposes. Always verify rates with your specific bank or wire service before executing financial transactions.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What is a dynamic currency conversion (DCC)?</h3>
+            <p>DCC is a service offered by overseas merchants or ATMs, letting you pay in your home currency rather than the local currency. While convenient, DCC usually incurs highly unfavorable exchange rates and hidden markup fees. It is almost always better to choose to pay in the **local currency**.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- RIGHT COLUMN (Sidebar) -->
+    <aside class="calc-sidebar-col">
+      
+      <!-- Quick Navigation -->
+      <div class="sidebar-widget">
+        <h4>All Financial Calculators</h4>
+        <div class="sidebar-links">
+          <a href="/emi-calculator.html"><span class="sidebar-icon-span">🏠</span> EMI Calculator</a>
+          <a href="/sip-calculator.html"><span class="sidebar-icon-span">📈</span> SIP Calculator</a>
+          <a href="/fd-calculator.html"><span class="sidebar-icon-span">🏦</span> FD Calculator</a>
+          <a href="/ppf-calculator.html"><span class="sidebar-icon-span">🇮🇳</span> PPF Calculator</a>
+          <a href="/compound-interest-calculator.html"><span class="sidebar-icon-span">💹</span> Compound Interest</a>
+          <a href="/gst-calculator.html"><span class="sidebar-icon-span">🧾</span> GST Calculator</a>
+          <a href="/income-tax-calculator.html"><span class="sidebar-icon-span">📋</span> Income Tax</a>
+          <a href="/currency-converter.html" class="active"><span class="sidebar-icon-span">💱</span> Currency Converter</a>
+        </div>
+      </div>
+
+      <!-- Sticky Sidebar Ad Slot -->
+      <div class="ad-slot-sidebar">
+        <span class="ad-tag-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2401176048519015"
+             data-ad-slot="1245789632"
+             data-ad-format="rectangle, vertical"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Tutoring Widget -->
+      <div class="sidebar-widget" style="border-left: 3px solid #10b981;">
+        <h4 style="color: #10b981;">Need Academic Help?</h4>
+        <p style="font-size: 0.82rem; color: #94a3b8; line-height: 1.5; margin-bottom: 16px;">Connect with certified experts for 1-on-1 tutoring sessions in Math, Accounting, or Finance.</p>
+        <a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener" class="btn-tutor-cta" style="display: block; text-align: center; font-size: 0.8rem; padding: 10px;">Find a Tutor</a>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Related Tools Footer -->
+  <section class="related-tools-section">
+    <h3>Related Calculators</h3>
+    <div class="related-grid">
+      <div class="related-card">
+        <span class="related-card-icon">🏠</span>
+        <h4 class="related-card-title">EMI Calculator</h4>
+        <p class="related-card-desc">Calculate loan instalments, interest payable and loan details.</p>
+        <a href="/emi-calculator.html" class="related-card-link">Calculate EMI →</a>
+      </div>
+      <div class="related-card">
+        <span class="related-card-icon">🧾</span>
+        <h4 class="related-card-title">GST Calculator</h4>
+        <p class="related-card-desc">Calculate inclusive & exclusive GST and see CGST/SGST splits.</p>
+        <a href="/gst-calculator.html" class="related-card-link">Calculate GST →</a>
+      </div>
+      <div class="related-card">
+        <span class="related-card-icon">📈</span>
+        <h4 class="related-card-title">SIP Calculator</h4>
+        <p class="related-card-desc">Estimate mutual fund returns and compounding wealth gained over time.</p>
+        <a href="/sip-calculator.html" class="related-card-link">Calculate SIP →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FOOTER ════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo"><span class="logo-icon">₹</span>Faidence <span class="logo-fin">Finance</span></a>
+        <p>Free financial calculators for India.<br>No signup. No data stored. Always free.<br>Updated for FY 2025-26.</p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/emi-calculator.html">EMI Calculator</a></li>
+          <li><a href="/sip-calculator.html">SIP Calculator</a></li>
+          <li><a href="/fd-calculator.html">FD Calculator</a></li>
+          <li><a href="/ppf-calculator.html">PPF Calculator</a></li>
+          <li><a href="/compound-interest-calculator.html">Compound Interest</a></li>
+          <li><a href="/gst-calculator.html">GST Calculator</a></li>
+          <li><a href="/income-tax-calculator.html">Income Tax</a></li>
+          <li><a href="/currency-converter.html">Currency Converter</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Faidence</h4>
+        <ul>
+          <li><a href="https://faidence.com" target="_blank" rel="noopener">Main Website</a></li>
+          <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener">Online Tutoring</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Faidence Finance. All rights reserved. | <a href="/privacy.html">Privacy</a> | <a href="/terms.html">Terms</a> | Not financial advice.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

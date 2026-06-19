@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google AdSense - Verified and Configured -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2401176048519015" crossorigin="anonymous"></script>
+  
+  <title>PPF Calculator India – Public Provident Fund Interest | Faidence Finance</title>
+  <meta name="description" content="Calculate your Public Provident Fund (PPF) maturity amount, interest earned, and annual tax-free wealth buildup online. 100% free and updated for FY 2025-26." />
+  <link rel="canonical" href="https://finance.faidence.com/ppf-calculator.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════════════ NAVBAR ════════════ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Home"><span class="logo-icon">₹</span>Faidence <span class="logo-fin">Finance</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#tools">Tools</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="/#disclaimer">Disclaimer</a></li>
+        <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener" class="nav-tutor-link">🎓 Tutoring</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ════════════ PAGE HEADER ════════════ -->
+  <header class="calc-page-header">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">&gt;</span>
+      <a href="/#tools">Calculators</a>
+      <span class="breadcrumb-sep">&gt;</span>
+      <span>PPF Calculator</span>
+    </div>
+    <h1>PPF Calculator</h1>
+    <p>Calculate your Public Provident Fund returns, interest accumulation, and tax-exempt maturity value.</p>
+  </header>
+
+  <!-- ════════════ TWO-COLUMN LAYOUT ════════════ -->
+  <div class="calc-layout-container">
+    
+    <!-- LEFT COLUMN (Calculator + Content) -->
+    <div class="calc-main-col">
+      
+      <!-- Strategic Ad Placement: Above the Fold -->
+      <div class="ad-slot-above-fold">
+        <span class="ad-tag-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2401176048519015"
+             data-ad-slot="8857410023"
+             data-ad-format="horizontal"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Interactive Calculator Panel -->
+      <div class="calc-panel active" id="calc-ppf" style="padding: 0; background: transparent; border: none;">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <h3 class="calc-title">Investment Details</h3>
+            <p class="calc-desc">Enter your annual PPF contribution and preferred lock-in tenure. The interest rate is backed by the Government of India.</p>
+            <div class="input-group">
+              <label for="ppf-annual">Yearly Investment (₹)</label>
+              <input type="number" id="ppf-annual" value="150000" min="500" max="150000" step="500" />
+              <input type="range" id="ppf-annual-r" min="500" max="150000" step="500" value="150000" class="slider" />
+              <div class="range-labels"><span>₹500</span><span>₹1.5L (max)</span></div>
+            </div>
+            <div class="input-group">
+              <label for="ppf-tenure">Tenure (Years)</label>
+              <input type="number" id="ppf-tenure" value="15" min="15" max="50" step="5" />
+              <input type="range" id="ppf-tenure-r" min="15" max="50" step="5" value="15" class="slider" />
+              <div class="range-labels"><span>15 yr</span><span>50 yr</span></div>
+            </div>
+            <div class="input-group">
+              <label>Interest Rate</label>
+              <div class="ppf-rate-display">7.1% p.a. (Government set, reviewed quarterly)</div>
+            </div>
+          </div>
+          <div class="calc-results">
+            <div class="result-card">
+              <div class="result-main"><span class="result-label">Maturity Payout</span><span class="result-value" id="ppf-result">₹0</span></div>
+              <div class="result-breakdown">
+                <div class="rb-item"><span class="rb-dot dot-principal"></span><span class="rb-label">Total Invested</span><span class="rb-val" id="ppf-invested-out">₹0</span></div>
+                <div class="rb-item"><span class="rb-dot dot-interest"></span><span class="rb-label">Interest Earned</span><span class="rb-val" id="ppf-interest-out">₹0</span></div>
+                <div class="rb-item total-row"><span class="rb-dot dot-total"></span><span class="rb-label">Total Value</span><span class="rb-val" id="ppf-total-out">₹0</span></div>
+              </div>
+              <div class="donut-wrap"><canvas id="ppf-chart" width="180" height="180"></canvas>
+                <div class="donut-legend"><span class="leg-item"><span class="leg-dot dot-principal"></span>Invested</span><span class="leg-item"><span class="leg-dot dot-interest"></span>Interest</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strategic Ad Placement: Results-Adjacent -->
+      <div class="ad-slot-results-adjacent">
+        <span class="ad-tag-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-2401176048519015"
+             data-ad-slot="9854120352"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Educational Guide Content -->
+      <article class="calc-guide-content">
+        <h2>What is the Public Provident Fund (PPF)?</h2>
+        <p>The <strong>Public Provident Fund (PPF)</strong> is a popular long-term savings-cum-investment scheme in India. Launched by the Ministry of Finance in 1968, it aims to mobilize small savings by offering reasonable returns combined with high tax safety. Because it is backed by the Central Government, the principal and interest earnings carry an absolute sovereign guarantee.</p>
+        
+        <h3>The PPF Compounding Formula</h3>
+        <p>Interest on PPF is compounded annually. The mathematical formula to compute PPF maturity value is:</p>
+        <blockquote>
+          <p><strong>A = F × [ ( (1 + r)^n - 1 ) / r ] × (1 + r)</strong></p>
+        </blockquote>
+        <p>Where:</p>
+        <ul>
+          <li><strong>A</strong> is the final Maturity Amount.</li>
+          <li><strong>F</strong> is the Annual Installment deposited.</li>
+          <li><strong>r</strong> is the annual interest rate (e.g., 7.1% p.a. is 0.071).</li>
+          <li><strong>n</strong> is the total number of compounding years (minimum 15).</li>
+        </ul>
+        <p><em>Note: This equation assumes that the annual installment is deposited at the beginning of each financial year (before 5th April).</em></p>
+
+        <h3>Step-by-Step Example Calculation</h3>
+        <p>Suppose you deposit the maximum limit of <strong>₹1,50,000 (F)</strong> annually at the beginning of the year for the standard <strong>15-year tenure (n)</strong> at the rate of <strong>7.1% (r = 0.071)</strong>.</p>
+        <ol>
+          <li>Calculate the compound interest factor:
+            <br><code>(1 + r)^n = (1.071)^15 ≈ 2.78457</code>
+          </li>
+          <li>Apply the formula:
+            <br><code>A = 150,000 × [ (2.78457 - 1) / 0.071 ] × (1 + 0.071)</code>
+            <br><code>A = 150,000 × [ 1.78457 / 0.071 ] × 1.071</code>
+            <br><code>A = 150,000 × 25.13479 × 1.071 ≈ ₹40,36,654</code>
+          </li>
+          <li>Evaluate investments vs interest:
+            <br>Total Invested Sum = 1,50,000 × 15 = <strong>₹22,50,000</strong>.
+            <br>Interest Earned = ₹40,36,654 - ₹22,50,000 = <strong>₹17,86,654</strong>.
+          </li>
+        </ol>
+        <p>By contributing ₹1.5 Lakhs annually, you accumulate over <strong>₹40.36 Lakhs</strong> by maturity. The earned interest of ₹17.8 Lakhs is completely tax-free!</p>
+
+        <h3>The EEE Tax Status Explained</h3>
+        <p>PPF enjoys the coveted <strong>Exempt-Exempt-Exempt (EEE)</strong> status under Section 80C of the Indian Income Tax Act:
+        <ul>
+          <li><strong>Exempt 1 (Investment):</strong> The annual principal deposit (up to ₹1.5 Lakhs) is deductible from your taxable income.</li>
+          <li><strong>Exempt 2 (Accumulation):</strong> The compounding interest accumulated annually in your account is completely exempt from wealth tax or income tax.</li>
+          <li><strong>Exempt 3 (Withdrawal):</strong> The final maturity amount paid out at the end of the lock-in period is completely tax-free.</li>
+        </ul>
+        </p>
+      </article>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" style="padding: 0; margin: 0;">
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: #f1f5f9; margin-bottom: 24px;">Frequently Asked Questions</h2>
+        <div class="faq-grid" style="grid-template-columns: 1fr; gap: 16px;">
+          <div class="faq-item">
+            <h3>What are the deposit limits for a PPF account?</h3>
+            <p>You must invest a minimum of **₹500** and can invest a maximum of **₹1,50,000** per financial year. If you invest more than ₹1.5 Lakhs, the excess amount will not earn any interest and will not be eligible for tax deductions.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I extend my PPF account after 15 years?</h3>
+            <p>Yes. Upon completion of the initial 15-year tenure, you can extend your PPF account indefinitely in blocks of **5 years**. You must submit Form H to your bank or post office within 1 year of maturity if you wish to continue making contributions.</p>
+          </div>
+          <div class="faq-item">
+            <h3>When is PPF interest calculated and credited?</h3>
+            <p>PPF interest is calculated monthly based on the lowest balance in the account between the **5th and the last day of the month**. Therefore, to maximize interest, you should deposit your annual contribution before the 5th of April, or make monthly deposits before the 5th of every month. The interest is credited to the account once a year on March 31st.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- RIGHT COLUMN (Sidebar) -->
+    <aside class="calc-sidebar-col">
+      
+      <!-- Quick Navigation -->
+      <div class="sidebar-widget">
+        <h4>All Financial Calculators</h4>
+        <div class="sidebar-links">
+          <a href="/emi-calculator.html"><span class="sidebar-icon-span">🏠</span> EMI Calculator</a>
+          <a href="/sip-calculator.html"><span class="sidebar-icon-span">📈</span> SIP Calculator</a>
+          <a href="/fd-calculator.html"><span class="sidebar-icon-span">🏦</span> FD Calculator</a>
+          <a href="/ppf-calculator.html" class="active"><span class="sidebar-icon-span">🇮🇳</span> PPF Calculator</a>
+          <a href="/compound-interest-calculator.html"><span class="sidebar-icon-span">💹</span> Compound Interest</a>
+          <a href="/gst-calculator.html"><span class="sidebar-icon-span">🧾</span> GST Calculator</a>
+          <a href="/income-tax-calculator.html"><span class="sidebar-icon-span">📋</span> Income Tax</a>
+          <a href="/currency-converter.html"><span class="sidebar-icon-span">💱</span> Currency Converter</a>
+        </div>
+      </div>
+
+      <!-- Sticky Sidebar Ad Slot -->
+      <div class="ad-slot-sidebar">
+        <span class="ad-tag-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2401176048519015"
+             data-ad-slot="1245789632"
+             data-ad-format="rectangle, vertical"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Tutoring Widget -->
+      <div class="sidebar-widget" style="border-left: 3px solid #10b981;">
+        <h4 style="color: #10b981;">Need Academic Help?</h4>
+        <p style="font-size: 0.82rem; color: #94a3b8; line-height: 1.5; margin-bottom: 16px;">Connect with certified experts for 1-on-1 tutoring sessions in Math, Accounting, or Finance.</p>
+        <a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener" class="btn-tutor-cta" style="display: block; text-align: center; font-size: 0.8rem; padding: 10px;">Find a Tutor</a>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Related Tools Footer -->
+  <section class="related-tools-section">
+    <h3>Related Calculators</h3>
+    <div class="related-grid">
+      <div class="related-card">
+        <span class="related-card-icon">🏦</span>
+        <h4 class="related-card-title">Fixed Deposit (FD)</h4>
+        <p class="related-card-desc">See your maturity payouts and quarterly compounded returns.</p>
+        <a href="/fd-calculator.html" class="related-card-link">Calculate FD →</a>
+      </div>
+      <div class="related-card">
+        <span class="related-card-icon">📈</span>
+        <h4 class="related-card-title">SIP Calculator</h4>
+        <p class="related-card-desc">Estimate mutual fund returns and compounding wealth gained over time.</p>
+        <a href="/sip-calculator.html" class="related-card-link">Calculate SIP →</a>
+      </div>
+      <div class="related-card">
+        <span class="related-card-icon">📋</span>
+        <h4 class="related-card-title">Income Tax</h4>
+        <p class="related-card-desc">Compare tax slabs under Old vs New Regime side-by-side.</p>
+        <a href="/income-tax-calculator.html" class="related-card-link">Compare Tax →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FOOTER ════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo"><span class="logo-icon">₹</span>Faidence <span class="logo-fin">Finance</span></a>
+        <p>Free financial calculators for India.<br>No signup. No data stored. Always free.<br>Updated for FY 2025-26.</p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/emi-calculator.html">EMI Calculator</a></li>
+          <li><a href="/sip-calculator.html">SIP Calculator</a></li>
+          <li><a href="/fd-calculator.html">FD Calculator</a></li>
+          <li><a href="/ppf-calculator.html">PPF Calculator</a></li>
+          <li><a href="/compound-interest-calculator.html">Compound Interest</a></li>
+          <li><a href="/gst-calculator.html">GST Calculator</a></li>
+          <li><a href="/income-tax-calculator.html">Income Tax</a></li>
+          <li><a href="/currency-converter.html">Currency Converter</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Faidence</h4>
+        <ul>
+          <li><a href="https://faidence.com" target="_blank" rel="noopener">Main Website</a></li>
+          <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener">Online Tutoring</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Faidence Finance. All rights reserved. | <a href="/privacy.html">Privacy</a> | <a href="/terms.html">Terms</a> | Not financial advice.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

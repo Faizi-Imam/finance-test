@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google AdSense - Verified and Configured -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2401176048519015" crossorigin="anonymous"></script>
+  
+  <title>GST Calculator India – CGST & SGST Split Calculator | Faidence Finance</title>
+  <meta name="description" content="Calculate Goods and Services Tax (GST) in India. Compute GST inclusive or exclusive prices and see CGST & SGST splits instantly." />
+  <link rel="canonical" href="https://finance.faidence.com/gst-calculator.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════════════ NAVBAR ════════════ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Home"><span class="logo-icon">₹</span>Faidence <span class="logo-fin">Finance</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#tools">Tools</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="/#disclaimer">Disclaimer</a></li>
+        <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener" class="nav-tutor-link">🎓 Tutoring</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ════════════ PAGE HEADER ════════════ -->
+  <header class="calc-page-header">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">&gt;</span>
+      <a href="/#tools">Calculators</a>
+      <span class="breadcrumb-sep">&gt;</span>
+      <span>GST Calculator</span>
+    </div>
+    <h1>GST Calculator</h1>
+    <p>Calculate GST inclusive or exclusive prices, and check the CGST & SGST split breakdown instantly.</p>
+  </header>
+
+  <!-- ════════════ TWO-COLUMN LAYOUT ════════════ -->
+  <div class="calc-layout-container">
+    
+    <!-- LEFT COLUMN (Calculator + Content) -->
+    <div class="calc-main-col">
+      
+      <!-- Strategic Ad Placement: Above the Fold -->
+      <div class="ad-slot-above-fold">
+        <span class="ad-tag-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2401176048519015"
+             data-ad-slot="8857410023"
+             data-ad-format="horizontal"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Interactive Calculator Panel -->
+      <div class="calc-panel active" id="calc-gst" style="padding: 0; background: transparent; border: none;">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <h3 class="calc-title">Tax Details</h3>
+            <p class="calc-desc">Enter the amount, select the GST tax rate slab, and choose whether the price is inclusive or exclusive of tax.</p>
+            <div class="input-group">
+              <label for="gst-amount">Enter Amount (₹)</label>
+              <input type="number" id="gst-amount" value="10000" min="1" step="1" />
+            </div>
+            <div class="input-group">
+              <label for="gst-rate">GST Rate (%)</label>
+              <select id="gst-rate" class="select-input">
+                <option value="5">5% – Essential goods</option>
+                <option value="12">12% – Standard goods</option>
+                <option value="18" selected>18% – Most services</option>
+                <option value="28">28% – Luxury &amp; sin goods</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Calculation Type</label>
+              <div class="radio-group">
+                <label class="radio-label"><input type="radio" name="gst-type" value="exclusive" checked /> GST Exclusive (add GST to amount)</label>
+                <label class="radio-label"><input type="radio" name="gst-type" value="inclusive" /> GST Inclusive (extract GST from amount)</label>
+              </div>
+            </div>
+          </div>
+          <div class="calc-results">
+            <div class="result-card gst-result-card" style="margin-top: 0;">
+              <div class="gst-row"><span>Original Amount</span><span id="gst-original">₹0</span></div>
+              <div class="gst-row accent-row"><span id="gst-type-label">GST Amount (18%)</span><span id="gst-amount-out">₹0</span></div>
+              <div class="gst-row"><span>CGST</span><span id="gst-cgst">₹0</span></div>
+              <div class="gst-row"><span>SGST</span><span id="gst-sgst">₹0</span></div>
+              <div class="gst-row total-gst-row"><span id="gst-total-label">Total Amount (with GST)</span><span id="gst-total">₹0</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strategic Ad Placement: Results-Adjacent -->
+      <div class="ad-slot-results-adjacent">
+        <span class="ad-tag-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-2401176048519015"
+             data-ad-slot="9854120352"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Educational Guide Content -->
+      <article class="calc-guide-content">
+        <h2>Understanding Goods and Services Tax (GST)</h2>
+        <p>The <strong>Goods and Services Tax (GST)</strong> is an indirect tax levied on the supply of goods and services in India. Introduced on 1st July 2017, it replaced multiple indirect taxes such as VAT, service tax, excise duty, and octroi, establishing a unified "One Nation, One Tax" system.</p>
+        
+        <h3>CGST, SGST, and IGST Split Explained</h3>
+        <p>Under India's dual GST structure, taxes are split depending on where the transaction occurs:
+        <ul>
+          <li><strong>CGST (Central GST):</strong> Collected by the Central Government on intra-state supplies of goods or services.</li>
+          <li><strong>SGST (State GST):</strong> Collected by the State Government on intra-state supplies.
+            <br><em>Note: For intra-state sales, the GST slab rate is split equally (50:50) into CGST and SGST. For example, an 18% GST rate consists of 9% CGST and 9% SGST.</em>
+          </li>
+          <li><strong>IGST (Integrated GST):</strong> Levied by the Central Government on inter-state supplies (sales from one state to another) and imports. The IGST rate is equal to the total GST slab rate.</li>
+        </ul>
+        </p>
+
+        <h3>GST Mathematical Formulas</h3>
+        
+        <h4>1. GST Exclusive (Adding GST to Base Price)</h4>
+        <p>Use this if you know the net base price and want to calculate the tax and total cost:</p>
+        <blockquote>
+          <p><strong>GST Amount = Base Price × [Rate / 100]</strong>
+          <br><strong>Total Price = Base Price + GST Amount</strong></p>
+        </blockquote>
+        <p><strong>Example:</strong> Net Price is ₹10,000 and GST rate is 18%.
+          <br><code>GST Amount = 10,000 × 0.18 = ₹1,800</code>
+          <br><code>Total Price = 10,000 + 1,800 = ₹11,800</code>
+          <br>CGST = ₹900, SGST = ₹900.
+        </p>
+
+        <h4>2. GST Inclusive (Extracting GST from Total Price)</h4>
+        <p>Use this if you know the final bill amount and want to extract the tax component and base cost:</p>
+        <blockquote>
+          <p><strong>Base Price = Total Price × [100 / (100 + Rate)]</strong>
+          <br><strong>GST Amount = Total Price - Base Price</strong></p>
+        </blockquote>
+        <p><strong>Example:</strong> Bill Total is ₹11,800 and GST rate is 18%.
+          <br><code>Base Price = 11,800 × [100 / 118] = ₹10,000</code>
+          <br><code>GST Amount = 11,800 - 10,000 = ₹1,800</code>
+          <br>CGST = ₹900, SGST = ₹900.
+        </p>
+
+        <h3>GST Tax Slabs in India</h3>
+        <p>Goods and services are categorized under five primary tax slabs:
+        <ul>
+          <li><strong>0% (Exempt):</strong> Essential goods like milk, fresh fruits, vegetables, and flour.</li>
+          <li><strong>5%:</strong> Essential items like sugar, tea, coffee, edible oil, and life-saving drugs.</li>
+          <li><strong>12%:</strong> Butter, cheese, cell phones, processed food, and business class air travel.</li>
+          <li><strong>18%:</strong> Most services, IT services, financial services, steel, and capital goods.</li>
+          <li><strong>28%:</strong> Luxury and luxury/sin items like cars, soft drinks, tobacco products, and five-star hotel services.</li>
+        </ul>
+        </p>
+      </article>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" style="padding: 0; margin: 0;">
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: #f1f5f9; margin-bottom: 24px;">Frequently Asked Questions</h2>
+        <div class="faq-grid" style="grid-template-columns: 1fr; gap: 16px;">
+          <div class="faq-item">
+            <h3>Who needs to register for GST in India?</h3>
+            <p>Businesses providing services with an annual turnover exceeding **₹20 Lakhs** (₹10 Lakhs for North-Eastern states) and suppliers of goods with turnover exceeding **₹40 Lakhs** must register for GST. Additionally, anyone conducting inter-state trade or e-commerce sales must register regardless of turnover.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What is Input Tax Credit (ITC)?</h3>
+            <p>Input Tax Credit allows businesses to reduce the GST they collect on sales by the amount of GST they already paid on business purchases (inputs). This prevents double taxation and cascading taxes along the supply chain.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is there any difference between CGST + SGST vs IGST payouts?</h3>
+            <p>No. Economically, the tax burden is exactly the same. For intra-state trade, a 18% rate is paid as 9% CGST and 9% SGST. For inter-state trade, a 18% rate is paid as 18% IGST. The total tax liability remains identical.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- RIGHT COLUMN (Sidebar) -->
+    <aside class="calc-sidebar-col">
+      
+      <!-- Quick Navigation -->
+      <div class="sidebar-widget">
+        <h4>All Financial Calculators</h4>
+        <div class="sidebar-links">
+          <a href="/emi-calculator.html"><span class="sidebar-icon-span">🏠</span> EMI Calculator</a>
+          <a href="/sip-calculator.html"><span class="sidebar-icon-span">📈</span> SIP Calculator</a>
+          <a href="/fd-calculator.html"><span class="sidebar-icon-span">🏦</span> FD Calculator</a>
+          <a href="/ppf-calculator.html"><span class="sidebar-icon-span">🇮🇳</span> PPF Calculator</a>
+          <a href="/compound-interest-calculator.html"><span class="sidebar-icon-span">💹</span> Compound Interest</a>
+          <a href="/gst-calculator.html" class="active"><span class="sidebar-icon-span">🧾</span> GST Calculator</a>
+          <a href="/income-tax-calculator.html"><span class="sidebar-icon-span">📋</span> Income Tax</a>
+          <a href="/currency-converter.html"><span class="sidebar-icon-span">💱</span> Currency Converter</a>
+        </div>
+      </div>
+
+      <!-- Sticky Sidebar Ad Slot -->
+      <div class="ad-slot-sidebar">
+        <span class="ad-tag-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2401176048519015"
+             data-ad-slot="1245789632"
+             data-ad-format="rectangle, vertical"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Tutoring Widget -->
+      <div class="sidebar-widget" style="border-left: 3px solid #10b981;">
+        <h4 style="color: #10b981;">Need Academic Help?</h4>
+        <p style="font-size: 0.82rem; color: #94a3b8; line-height: 1.5; margin-bottom: 16px;">Connect with certified experts for 1-on-1 tutoring sessions in Math, Accounting, or Finance.</p>
+        <a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener" class="btn-tutor-cta" style="display: block; text-align: center; font-size: 0.8rem; padding: 10px;">Find a Tutor</a>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Related Tools Footer -->
+  <section class="related-tools-section">
+    <h3>Related Calculators</h3>
+    <div class="related-grid">
+      <div class="related-card">
+        <span class="related-card-icon">📋</span>
+        <h4 class="related-card-title">Income Tax</h4>
+        <p class="related-card-desc">Compare tax slabs under Old vs New Regime side-by-side.</p>
+        <a href="/income-tax-calculator.html" class="related-card-link">Compare Tax →</a>
+      </div>
+      <div class="related-card">
+        <span class="related-card-icon">🏠</span>
+        <h4 class="related-card-title">EMI Calculator</h4>
+        <p class="related-card-desc">Calculate loan instalments, interest payable and loan details.</p>
+        <a href="/emi-calculator.html" class="related-card-link">Calculate EMI →</a>
+      </div>
+      <div class="related-card">
+        <span class="related-card-icon">💱</span>
+        <h4 class="related-card-title">Currency Converter</h4>
+        <p class="related-card-desc">Check live indicative exchange rates for major global currencies.</p>
+        <a href="/currency-converter.html" class="related-card-link">Convert Currency →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FOOTER ════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo"><span class="logo-icon">₹</span>Faidence <span class="logo-fin">Finance</span></a>
+        <p>Free financial calculators for India.<br>No signup. No data stored. Always free.<br>Updated for FY 2025-26.</p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/emi-calculator.html">EMI Calculator</a></li>
+          <li><a href="/sip-calculator.html">SIP Calculator</a></li>
+          <li><a href="/fd-calculator.html">FD Calculator</a></li>
+          <li><a href="/ppf-calculator.html">PPF Calculator</a></li>
+          <li><a href="/compound-interest-calculator.html">Compound Interest</a></li>
+          <li><a href="/gst-calculator.html">GST Calculator</a></li>
+          <li><a href="/income-tax-calculator.html">Income Tax</a></li>
+          <li><a href="/currency-converter.html">Currency Converter</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Faidence</h4>
+        <ul>
+          <li><a href="https://faidence.com" target="_blank" rel="noopener">Main Website</a></li>
+          <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener">Online Tutoring</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Faidence Finance. All rights reserved. | <a href="/privacy.html">Privacy</a> | <a href="/terms.html">Terms</a> | Not financial advice.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

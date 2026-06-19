@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google AdSense - Verified and Configured -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2401176048519015" crossorigin="anonymous"></script>
+  
+  <title>EMI Calculator India – Home, Car & Personal Loan EMI | Faidence Finance</title>
+  <meta name="description" content="Calculate your Equated Monthly Instalment (EMI) for home loans, car loans, and personal loans. Instant results, interactive compounding charts, and step-by-step formulas." />
+  <link rel="canonical" href="https://finance.faidence.com/emi-calculator.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════════════ NAVBAR ════════════ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Home"><span class="logo-icon">₹</span>Faidence <span class="logo-fin">Finance</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#tools">Tools</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="/#disclaimer">Disclaimer</a></li>
+        <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener" class="nav-tutor-link">🎓 Tutoring</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ════════════ PAGE HEADER ════════════ -->
+  <header class="calc-page-header">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">&gt;</span>
+      <a href="/#tools">Calculators</a>
+      <span class="breadcrumb-sep">&gt;</span>
+      <span>EMI Calculator</span>
+    </div>
+    <h1>EMI Calculator</h1>
+    <p>Calculate your monthly loan instalments, total interest payable, and amortization breakdown instantly.</p>
+  </header>
+
+  <!-- ════════════ TWO-COLUMN LAYOUT ════════════ -->
+  <div class="calc-layout-container">
+    
+    <!-- LEFT COLUMN (Calculator + Content) -->
+    <div class="calc-main-col">
+      
+      <!-- Strategic Ad Placement: Above the Fold -->
+      <div class="ad-slot-above-fold">
+        <span class="ad-tag-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2401176048519015"
+             data-ad-slot="8857410023"
+             data-ad-format="horizontal"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Interactive Calculator Panel -->
+      <div class="calc-panel active" id="calc-emi" style="padding: 0; background: transparent; border: none;">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <h3 class="calc-title">Loan Details</h3>
+            <p class="calc-desc">Enter the principal loan amount, interest rate, and tenure to calculate your Equated Monthly Instalment (EMI).</p>
+            <div class="input-group">
+              <label for="emi-principal">Loan Amount (₹)</label>
+              <input type="number" id="emi-principal" value="2000000" min="10000" max="100000000" step="10000" />
+              <input type="range" id="emi-principal-r" min="10000" max="10000000" step="10000" value="2000000" class="slider" />
+              <div class="range-labels"><span>₹10K</span><span>₹1Cr</span></div>
+            </div>
+            <div class="input-group">
+              <label for="emi-rate">Annual Interest Rate (%)</label>
+              <input type="number" id="emi-rate" value="8.5" min="1" max="30" step="0.1" />
+              <input type="range" id="emi-rate-r" min="1" max="30" step="0.1" value="8.5" class="slider" />
+              <div class="range-labels"><span>1%</span><span>30%</span></div>
+            </div>
+            <div class="input-group">
+              <label for="emi-tenure">Loan Tenure (Years)</label>
+              <input type="number" id="emi-tenure" value="20" min="1" max="30" step="1" />
+              <input type="range" id="emi-tenure-r" min="1" max="30" step="1" value="20" class="slider" />
+              <div class="range-labels"><span>1 yr</span><span>30 yr</span></div>
+            </div>
+          </div>
+          <div class="calc-results">
+            <div class="result-card">
+              <div class="result-main"><span class="result-label">Monthly EMI</span><span class="result-value" id="emi-result">₹0</span></div>
+              <div class="result-breakdown">
+                <div class="rb-item"><span class="rb-dot dot-principal"></span><span class="rb-label">Principal Amount</span><span class="rb-val" id="emi-principal-out">₹0</span></div>
+                <div class="rb-item"><span class="rb-dot dot-interest"></span><span class="rb-label">Total Interest</span><span class="rb-val" id="emi-interest-out">₹0</span></div>
+                <div class="rb-item total-row"><span class="rb-dot dot-total"></span><span class="rb-label">Total Payment</span><span class="rb-val" id="emi-total-out">₹0</span></div>
+              </div>
+              <div class="donut-wrap"><canvas id="emi-chart" width="180" height="180"></canvas>
+                <div class="donut-legend"><span class="leg-item"><span class="leg-dot dot-principal"></span>Principal</span><span class="leg-item"><span class="leg-dot dot-interest"></span>Interest</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strategic Ad Placement: Results-Adjacent -->
+      <div class="ad-slot-results-adjacent">
+        <span class="ad-tag-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-2401176048519015"
+             data-ad-slot="9854120352"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Educational Guide Content -->
+      <article class="calc-guide-content">
+        <h2>Understanding Loan EMIs</h2>
+        <p>An <strong>Equated Monthly Instalment (EMI)</strong> is a fixed payment amount made by a borrower to a lender at a specified date each calendar month. EMIs are applied to both interest and principal each month, so that over a specified number of years, the loan is paid off in full.</p>
+        
+        <h3>The EMI Calculation Formula</h3>
+        <p>Loan EMIs are computed using a mathematical compounding formula. The formula is:</p>
+        <blockquote>
+          <p><strong>EMI = [P × r × (1+r)^n] / [(1+r)^n - 1]</strong></p>
+        </blockquote>
+        <p>Where:</p>
+        <ul>
+          <li><strong>P</strong> is the Principal loan amount (the initial sum borrowed).</li>
+          <li><strong>r</strong> is the monthly interest rate (annual interest rate divided by 12, then divided by 100).</li>
+          <li><strong>n</strong> is the loan tenure expressed in number of months (years × 12).</li>
+        </ul>
+
+        <h3>Step-by-Step Example Calculation</h3>
+        <p>Suppose you borrow a Home Loan of <strong>₹20,00,000 (P)</strong> at an annual interest rate of <strong>8.5%</strong> for a tenure of <strong>20 years (240 months)</strong>.</p>
+        <ol>
+          <li>Calculate monthly interest rate (r): 8.5 / 12 / 100 = <strong>0.007083</strong> per month.</li>
+          <li>Calculate total number of instalments (n): 20 × 12 = <strong>240 months</strong>.</li>
+          <li>Evaluate formula components:
+            <br><code>(1 + r)^n = (1.007083)^240 ≈ 5.4385</code>
+          </li>
+          <li>Plug into the EMI equation:
+            <br><code>EMI = [2,000,000 × 0.007083 × 5.4385] / [5.4385 - 1]</code>
+            <br><code>EMI = [77,030.7] / [4.4385] ≈ ₹17,356 per month</code>
+          </li>
+          <li>Calculate total payments:
+            <br>Total Repayment = 17,356 × 240 ≈ <strong>₹41,65,440</strong>.
+            <br>Total Interest Payable = ₹41,65,440 - ₹20,00,000 = <strong>₹21,65,440</strong>.
+          </li>
+        </ol>
+        <p>As you can see, over a long-term loan tenure like 20 years, the total interest paid (₹21.65 Lakhs) can exceed the original principal borrowed (₹20 Lakhs). This is why choosing a lower interest rate or keeping the tenure shorter significantly reduces your financial burden.</p>
+
+        <h3>Factors That Affect Your Monthly Loan EMI</h3>
+        <ul>
+          <li><strong>Principal Sum:</strong> Borrowing more money directly leads to a higher EMI. Keep down payments high to reduce your principal.</li>
+          <li><strong>Interest Rate:</strong> Higher rates increase the monthly interest component. Shop around for low interest rates or improve your credit rating (CIBIL score) to secure cheaper rates.</li>
+          <li><strong>Tenure:</strong> A longer tenure spreads payments out and lowers your monthly EMI. However, it increases the compounding period, resulting in much higher total interest paid.</li>
+        </ul>
+      </article>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" style="padding: 0; margin: 0;">
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: #f1f5f9; margin-bottom: 24px;">Frequently Asked Questions</h2>
+        <div class="faq-grid" style="grid-template-columns: 1fr; gap: 16px;">
+          <div class="faq-item">
+            <h3>Can I change my EMI amount during my loan tenure?</h3>
+            <p>Yes. If you make prepayments towards your principal balance, banks will usually allow you to choose between reducing your monthly EMI or keeping the EMI same and shortening your overall tenure. Opting to shorten the tenure saves you more interest money.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How does the amortization schedule change in early vs late years?</h3>
+            <p>During the first few years of a loan, most of your monthly EMI goes towards paying off the interest. Over time, as the outstanding principal balance decreases, the interest share of the EMI drops, and a larger portion goes toward repaying the principal.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What is a prepayment fee and does it apply to all loans?</h3>
+            <p>In India, the RBI prohibits banks from charging prepayment penalties on floating-rate home loans. However, fixed-rate loans or personal/car loans may incur prepayment fees ranging from 1% to 4% if you pay off the loan early.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- RIGHT COLUMN (Sidebar) -->
+    <aside class="calc-sidebar-col">
+      
+      <!-- Quick Navigation -->
+      <div class="sidebar-widget">
+        <h4>All Financial Calculators</h4>
+        <div class="sidebar-links">
+          <a href="/emi-calculator.html" class="active"><span class="sidebar-icon-span">🏠</span> EMI Calculator</a>
+          <a href="/sip-calculator.html"><span class="sidebar-icon-span">📈</span> SIP Calculator</a>
+          <a href="/fd-calculator.html"><span class="sidebar-icon-span">🏦</span> FD Calculator</a>
+          <a href="/ppf-calculator.html"><span class="sidebar-icon-span">🇮🇳</span> PPF Calculator</a>
+          <a href="/compound-interest-calculator.html"><span class="sidebar-icon-span">💹</span> Compound Interest</a>
+          <a href="/gst-calculator.html"><span class="sidebar-icon-span">🧾</span> GST Calculator</a>
+          <a href="/income-tax-calculator.html"><span class="sidebar-icon-span">📋</span> Income Tax</a>
+          <a href="/currency-converter.html"><span class="sidebar-icon-span">💱</span> Currency Converter</a>
+        </div>
+      </div>
+
+      <!-- Sticky Sidebar Ad Slot -->
+      <div class="ad-slot-sidebar">
+        <span class="ad-tag-label">Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2401176048519015"
+             data-ad-slot="1245789632"
+             data-ad-format="rectangle, vertical"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Tutoring Widget -->
+      <div class="sidebar-widget" style="border-left: 3px solid #10b981;">
+        <h4 style="color: #10b981;">Need Academic Help?</h4>
+        <p style="font-size: 0.82rem; color: #94a3b8; line-height: 1.5; margin-bottom: 16px;">Connect with certified experts for 1-on-1 tutoring sessions in Math, Accounting, or Finance.</p>
+        <a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener" class="btn-tutor-cta" style="display: block; text-align: center; font-size: 0.8rem; padding: 10px;">Find a Tutor</a>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Related Tools Footer -->
+  <section class="related-tools-section">
+    <h3>Related Calculators</h3>
+    <div class="related-grid">
+      <div class="related-card">
+        <span class="related-card-icon">📈</span>
+        <h4 class="related-card-title">SIP Calculator</h4>
+        <p class="related-card-desc">Estimate mutual fund returns and compounding wealth gained over time.</p>
+        <a href="/sip-calculator.html" class="related-card-link">Calculate SIP →</a>
+      </div>
+      <div class="related-card">
+        <span class="related-card-icon">🏦</span>
+        <h4 class="related-card-title">Fixed Deposit (FD)</h4>
+        <p class="related-card-desc">See your maturity payouts and quarterly compounded returns.</p>
+        <a href="/fd-calculator.html" class="related-card-link">Calculate FD →</a>
+      </div>
+      <div class="related-card">
+        <span class="related-card-icon">💹</span>
+        <h4 class="related-card-title">Compound Interest</h4>
+        <p class="related-card-desc">Compare compounding intervals and watch your savings grow.</p>
+        <a href="/compound-interest-calculator.html" class="related-card-link">Calculate Compound →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FOOTER ════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo"><span class="logo-icon">₹</span>Faidence <span class="logo-fin">Finance</span></a>
+        <p>Free financial calculators for India.<br>No signup. No data stored. Always free.<br>Updated for FY 2025-26.</p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/emi-calculator.html">EMI Calculator</a></li>
+          <li><a href="/sip-calculator.html">SIP Calculator</a></li>
+          <li><a href="/fd-calculator.html">FD Calculator</a></li>
+          <li><a href="/ppf-calculator.html">PPF Calculator</a></li>
+          <li><a href="/compound-interest-calculator.html">Compound Interest</a></li>
+          <li><a href="/gst-calculator.html">GST Calculator</a></li>
+          <li><a href="/income-tax-calculator.html">Income Tax</a></li>
+          <li><a href="/currency-converter.html">Currency Converter</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Faidence</h4>
+        <ul>
+          <li><a href="https://faidence.com" target="_blank" rel="noopener">Main Website</a></li>
+          <li><a href="https://onlinetutoring.faidence.com" target="_blank" rel="noopener">Online Tutoring</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Faidence Finance. All rights reserved. | <a href="/privacy.html">Privacy</a> | <a href="/terms.html">Terms</a> | Not financial advice.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

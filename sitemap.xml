@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://finance.faidence.com/</loc>
+    <loc>https://faidence.com/</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://finance.faidence.com/about.html</loc>
+    <loc>https://faidence.com/about.html</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://finance.faidence.com/contact.html</loc>
+    <loc>https://faidence.com/contact.html</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://finance.faidence.com/terms.html</loc>
+    <loc>https://faidence.com/terms.html</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://finance.faidence.com/privacy.html</loc>
+    <loc>https://faidence.com/privacy.html</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://finance.faidence.com/emi-calculator.html</loc>
+    <loc>https://faidence.com/emi-calculator.html</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://finance.faidence.com/sip-calculator.html</loc>
+    <loc>https://faidence.com/sip-calculator.html</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://finance.faidence.com/fd-calculator.html</loc>
+    <loc>https://faidence.com/fd-calculator.html</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://finance.faidence.com/ppf-calculator.html</loc>
+    <loc>https://faidence.com/ppf-calculator.html</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://finance.faidence.com/compound-interest-calculator.html</loc>
+    <loc>https://faidence.com/compound-interest-calculator.html</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://finance.faidence.com/gst-calculator.html</loc>
+    <loc>https://faidence.com/gst-calculator.html</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://finance.faidence.com/income-tax-calculator.html</loc>
+    <loc>https://faidence.com/income-tax-calculator.html</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://finance.faidence.com/currency-converter.html</loc>
+    <loc>https://faidence.com/currency-converter.html</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>

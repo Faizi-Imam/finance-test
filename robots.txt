@@ -1,0 +1,10 @@
+# finance.faidence.com — free financial calculators.
+# Cloudflare injects its managed content-signal block above whatever is served
+# here; this file exists so the subdomain declares its OWN sitemap. Without it
+# Google only ever discovers these pages through faidence.com's sitemap, which
+# does not list them.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://finance.faidence.com/sitemap.xml

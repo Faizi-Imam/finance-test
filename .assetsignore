@@ -1,0 +1,7 @@
+# assets.directory is the repo root, so without this list Cloudflare would
+# serve the repository's own files as part of the website.
+LICENSE
+README.md
+wrangler.jsonc
+.assetsignore
+.gitignore

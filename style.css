@@ -617,6 +617,20 @@ button {
   font-weight: 500;
 }
 
+/* Live value badge shown next to slider */
+.live-val {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 6px;
+  padding: 2px 8px;
+  margin-top: 6px;
+  float: right;
+}
+
 /* Radio */
 
 .radio-group {
@@ -672,29 +686,30 @@ button {
 }
 
 .result-main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   padding-bottom: 24px;
   margin-bottom: 24px;
 }
 
 .result-label {
+  display: block;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #94a3b8;
-  margin-bottom: 8px;
 }
 
 .result-value {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 900;
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, #3b82f6, #10b981);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #10b981;
   line-height: 1.2;
+  display: block;
 }
 
 .result-breakdown {
@@ -1321,10 +1336,6 @@ button {
     font-size: 1.8rem;
   }
 
-  .forex-result-box .result-value {
-    font-size: 2rem;
-  }
-
   .hero-cards {
     display: none;
   }
@@ -1478,6 +1489,41 @@ button {
   gap: 24px;
 }
 
+/* Live rate status bar */
+.forex-rate-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+  width: 100%;
+}
+
+.forex-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #64748b;
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+
+.forex-status-dot.live {
+  background: #10b981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.5);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.forex-status-dot.error {
+  background: #f59e0b;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
 .forex-from-label {
   font-size: 1.1rem;
   font-weight: 600;
@@ -1494,10 +1540,7 @@ button {
   font-size: 2.4rem;
   font-weight: 900;
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, #3b82f6, #10b981);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #10b981;
 }
 
 .forex-disclaimer {

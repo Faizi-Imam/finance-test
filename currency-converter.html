@@ -112,13 +112,17 @@
           </div>
           <div class="calc-results">
             <div class="result-card forex-result-card" style="margin-top: 0;">
+              <div class="forex-rate-status" id="forex-rate-status">
+                <span class="forex-status-dot" id="forex-status-dot"></span>
+                <span id="forex-status-text">Fetching live rates…</span>
+              </div>
               <div class="forex-result-box">
                 <span class="forex-from-label" id="forex-from-label">1,000 USD</span>
                 <span class="forex-equals">=</span>
-                <span class="forex-to-value" id="forex-result">₹85,500.00</span>
+                <span class="forex-to-value" id="forex-result">—</span>
               </div>
-              <div class="forex-rate-info" id="forex-rate-display">1 USD = ₹85.50 | 1 INR = $0.0117</div>
-              <div class="forex-disclaimer">⚠️ Rates are indicative only. Actual bank rates may differ.</div>
+              <div class="forex-rate-info" id="forex-rate-display">Loading…</div>
+              <div class="forex-disclaimer">⚠️ Rates from European Central Bank via <a href="https://frankfurter.dev" target="_blank" rel="noopener" style="color:#f59e0b;">Frankfurter</a>. Updated daily. Not for financial transactions.</div>
             </div>
           </div>
         </div>
